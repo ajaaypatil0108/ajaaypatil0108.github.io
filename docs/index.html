@@ -188,6 +188,11 @@ h2{font-weight:800;font-size:clamp(32px,4.6vw,48px);line-height:1.08;letter-spac
 .where{font-size:13px;color:var(--muted);margin:2px 0 10px}
 .role ul{margin:0;padding-left:18px;color:#D3CBC3;font-size:15px}
 .role li{margin:5px 0}
+.role li.xhide{display:none}
+.seemore{display:inline-flex;align-items:center;gap:6px;margin:8px 0 0 18px;padding:0;border:0;background:none;color:var(--amber);font:600 14px/1.4 inherit;font-family:inherit;cursor:pointer}
+.seemore:hover{text-decoration:underline;text-underline-offset:3px}
+.seemore::after{content:"";width:6px;height:6px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-top:-3px}
+.seemore[aria-expanded="true"]::after{transform:rotate(-135deg);margin-top:3px}
 .role li::marker{color:#5A5A62}
 .badge{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:6px;margin-left:8px;vertical-align:2px}
 .badge.live{background:rgba(61,190,139,.14);color:var(--mint);border:1px solid rgba(61,190,139,.35)}
@@ -879,6 +884,31 @@ footer{padding:40px 0 48px;color:var(--muted);font-size:13px;display:flex;flex-w
     const io = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) { host.classList.add("go"); io.disconnect(); } }); }, {threshold:.3});
     io.observe(host);
   } else { host.classList.add("go"); }
+})();
+</script>
+<script>
+// Show the first two bullets of each role, LinkedIn-style, with a toggle for the rest
+(function(){
+  var KEEP = 2;
+  document.querySelectorAll('#experience .role ul').forEach(function(ul, i){
+    var items = ul.querySelectorAll('li');
+    if (items.length <= KEEP) return;
+    var extra = items.length - KEEP;
+    if (!ul.id) ul.id = 'xp-list-' + i;
+    for (var k = KEEP; k < items.length; k++) items[k].classList.add('xhide');
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'seemore';
+    btn.setAttribute('aria-expanded','false'); btn.setAttribute('aria-controls', ul.id);
+    var more = '\u2026see more (' + extra + ')', less = 'see less';
+    btn.textContent = more;
+    btn.addEventListener('click', function(){
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      for (var k = KEEP; k < items.length; k++) items[k].classList.toggle('xhide', open);
+      btn.setAttribute('aria-expanded', String(!open));
+      btn.textContent = open ? more : less;
+    });
+    ul.insertAdjacentElement('afterend', btn);
+  });
 })();
 </script>
 </body>
