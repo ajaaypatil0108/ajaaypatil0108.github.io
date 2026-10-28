@@ -44,6 +44,16 @@ a{color:inherit}
 .grad2{background:var(--grad2);-webkit-background-clip:text;background-clip:text;color:transparent}
 .muted{color:var(--muted)}
 
+/* motion */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
+.reveal.in{opacity:1;transform:none}
+nav ul a{position:relative;transition:color .2s}
+nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;border-radius:2px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+nav ul a.active{color:var(--text)}
+nav ul a.active::after{transform:scaleX(1)}
+.role li.xshow{animation:xin .4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes xin{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.role li.xshow{animation:none}nav ul a::after{transition:none}}
 /* nav */
 nav{position:sticky;top:0;z-index:20;background:rgba(14,14,16,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:60px}
@@ -903,12 +913,47 @@ footer{padding:40px 0 48px;color:var(--muted);font-size:13px;display:flex;flex-w
     btn.textContent = more;
     btn.addEventListener('click', function(){
       var open = btn.getAttribute('aria-expanded') === 'true';
-      for (var k = KEEP; k < items.length; k++) items[k].classList.toggle('xhide', open);
+      for (var k = KEEP; k < items.length; k++) { items[k].classList.toggle('xhide', open); items[k].classList.toggle('xshow', !open); }
       btn.setAttribute('aria-expanded', String(!open));
       btn.textContent = open ? more : less;
     });
     ul.insertAdjacentElement('afterend', btn);
   });
+})();
+</script>
+<script>
+// Motion: hero entrance on load, scroll-in reveals, and the active section in the menu
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce && 'IntersectionObserver' in window) {
+    var heroEls = document.querySelectorAll('.hero .pill, .hero h1, .hero .lede, .hero .cta, .hero .byline, .idcard, .stats .stat');
+    var sel = 'section .eyebrow, section h2, section .intro, section .card, section .morelink, .contact';
+    var els = Array.prototype.slice.call(document.querySelectorAll(sel));
+    var done = function(el){ el.addEventListener('transitionend', function f(e){ if (e.propertyName === 'opacity') { el.classList.remove('reveal','in'); el.style.removeProperty('--d'); el.removeEventListener('transitionend', f); } }); };
+    heroEls.forEach(function(el, i){ el.classList.add('reveal'); el.style.setProperty('--d', (i * 70) + 'ms'); done(el); });
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){ heroEls.forEach(function(el){ el.classList.add('in'); }); }); });
+    els.forEach(function(el){
+      var sibs = Array.prototype.filter.call(el.parentNode.children, function(c){ return c.matches(sel); });
+      var i = sibs.indexOf(el);
+      el.classList.add('reveal'); el.style.setProperty('--d', Math.min(i * 80, 400) + 'ms'); done(el);
+    });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold: 0.12, rootMargin: '0px 0px -40px 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  }
+  // highlight the menu link for the section in view
+  var links = {};
+  document.querySelectorAll('nav ul a[href^="#"]').forEach(function(a){ links[a.getAttribute('href').slice(1)] = a; });
+  if ('IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        var a = links[e.target.id]; if (!a) return;
+        if (e.isIntersecting) { Object.keys(links).forEach(function(k){ links[k].classList.remove('active'); }); a.classList.add('active'); }
+      });
+    }, {rootMargin: '-45% 0px -50% 0px'});
+    Object.keys(links).forEach(function(id){ var t = document.getElementById(id); if (t) spy.observe(t); });
+  }
 })();
 </script>
 </body>
