@@ -257,7 +257,8 @@ h2{font-weight:800;font-size:clamp(32px,4.6vw,48px);line-height:1.08;letter-spac
 .vgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 @media (max-width:860px){.vgrid{grid-template-columns:1fr}}
 .vol{padding:26px}
-.vol .top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.vol .top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:6px}
+.vol .top .badge{flex:none;margin-top:3px}
 .vol h3{margin:0;font-size:18px;font-weight:700}
 .vol .meta{font-size:13px;color:var(--muted);margin-bottom:12px}
 .vol p{margin:0;font-size:15px;color:#CFC7BF}
@@ -281,6 +282,23 @@ h2{font-weight:800;font-size:clamp(32px,4.6vw,48px);line-height:1.08;letter-spac
 .post::before{content:"";position:absolute;left:-27px;top:21px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--comet)}
 .post b{font-size:15.5px;font-weight:600}
 .post time{font-size:13px;color:var(--muted);white-space:nowrap}
+
+
+.subhead{margin:48px 0 18px;font-size:20px;font-weight:700;letter-spacing:-0.01em}
+.tgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:1000px){.tgrid{grid-template-columns:1fr}}
+.tproj{padding:24px;display:flex;flex-direction:column;gap:12px;border-top:3px solid var(--c)}
+.tproj h3{margin:0;font-size:17.5px;line-height:1.35;font-weight:700}
+.tproj p{margin:0;color:#CFC7BF;font-size:14.5px}
+.tproj .kpi b{font-size:20px}
+.team{margin-top:auto;font-size:13px;color:var(--muted);padding-top:4px}
+.rgrid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:20px}
+@media (max-width:1000px){.rgrid3{grid-template-columns:1fr}}
+.rec.small{padding:24px}
+.rec.small p{font-size:15px;line-height:1.6}
+.rec.small::after{font-size:100px;top:-16px}
+.rec p+p{margin-top:-8px}
+.vgrid{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
 
 /* contact */
 .contact{margin:96px 0 0;padding:56px 40px;border-radius:26px;position:relative;overflow:hidden;isolation:isolate;border:1px solid var(--line);background:var(--surf)}
@@ -346,7 +364,7 @@ footer{padding:40px 0 48px;color:var(--muted);font-size:13px;display:flex;flex-w
 
     <div class="stats">
       <div class="stat hl"><b>3.75</b><span>MS Finance GPA, UT Dallas</span></div>
-      <div class="stat"><b>5</b><span>Finance and strategy projects on GitHub</span></div>
+      <div class="stat"><b>8</b><span>Finance and strategy projects, 5 on GitHub</span></div>
       <div class="stat"><b>240+</b><span>Students supported as a TA, Spring 2026</span></div>
       <div class="stat hl2"><b>3</b><span>Internships in capital markets, FX and business analysis</span></div>
     </div>
@@ -545,8 +563,8 @@ footer{padding:40px 0 48px;color:var(--muted);font-size:13px;display:flex;flex-w
 <section id="projects">
   <div class="wrap">
     <div class="eyebrow"><b>03</b><i></i>Projects</div>
-    <h2>Five projects, <span class="grad">every file on GitHub.</span></h2>
-    <p class="intro">Each one has its own case-study site, with the model, report or PDF available to open.</p>
+    <h2>Eight projects, from <span class="grad">10-Ks to machine learning.</span></h2>
+    <p class="intro">Five self-directed projects, each with its own case-study site and files on GitHub, plus three team projects from the MS Finance program.</p>
     <div class="pgrid">
 
       <article class="card proj feature" style="--c:#E5372E">
@@ -623,6 +641,31 @@ footer{padding:40px 0 48px;color:var(--muted);font-size:13px;display:flex;flex-w
         </div>
       </article>
 
+    </div>
+
+    <h3 class="subhead">Team projects, MS Finance at UT Dallas</h3>
+    <div class="tgrid">
+      <article class="card tproj" style="--c:#7FB0F0">
+        <div class="pmeta"><span class="kind">Python &amp; machine learning</span><span>Sep 2025</span></div>
+        <h3>Stock Analysis and Machine Learning: Model Evaluation Using Google Colab</h3>
+        <p>Benchmarked BAC, JPM, WFC, TM, F and TSLA against the S&amp;P 500 on 2020–2025 data pulled with Python and yfinance. Applied EMA, SMA, MACD, RSI and Bollinger Bands to generate BUY / SELL / HOLD signals, ran monthly CAPM regressions for beta and alpha, and compared six models, from Linear Regression to XGBoost and a PyTorch neural network, on MSE, MAE and R².</p>
+        <div class="kpis two"><div class="kpi"><b>6</b><span>Stocks vs. the S&amp;P 500</span></div><div class="kpi"><b>6</b><span>Forecasting models compared</span></div></div>
+        <div class="team">With Krishna Chaitanya and Aparna</div>
+      </article>
+      <article class="card tproj" style="--c:#F5A524">
+        <div class="pmeta"><span class="kind">Financial statement analysis</span><span>Mar 2025 – May 2025</span></div>
+        <h3>Financial Statement Analysis: Food &amp; Beverage Industry (2022–2024)</h3>
+        <p>Common-size statements, ratio and trend analysis, cross-sectional benchmarking and an accounting-policy review of Mondelēz, Beyond Meat, Laird Superfood and B&amp;G Foods. Mondelēz came out as the most stable and diversified; Beyond Meat and Laird Superfood as high-risk, high-reward; B&amp;G Foods steady on revenue but acquisition-reliant and more leveraged.</p>
+        <div class="kpis two"><div class="kpi"><b>4</b><span>Companies analyzed</span></div><div class="kpi"><b>3 yrs</b><span>Of financials, 2022–2024</span></div></div>
+        <div class="team">With Aparna, Dhruv and 1 other</div>
+      </article>
+      <article class="card tproj" style="--c:#3DBE8B">
+        <div class="pmeta"><span class="kind">Negotiation</span><span>May 2025</span></div>
+        <h3>Negotiation Strategies: Roles, Intentions &amp; Breakthroughs</h3>
+        <p>Applied concepts from <i>Negotiation Genius</i> by Deepak Malhotra and Max H. Bazerman to team dynamics, customer payment terms, division of labor and communication, mapping the team’s J-curve from early collaboration struggles to coordinated work through role clarity and aligned intentions.</p>
+        <div class="kpis two"><div class="kpi"><b>J-curve</b><span>Team dynamics analysis</span></div><div class="kpi"><b>5</b><span>Team members</span></div></div>
+        <div class="team">With Joseph, Katie and 2 others</div>
+      </article>
     </div>
   </div>
 </section>
@@ -725,6 +768,11 @@ footer{padding:40px 0 48px;color:var(--muted);font-size:13px;display:flex;flex-w
     <h2>Five volunteer roles, <span class="grad">on campus and beyond.</span></h2>
     <div class="vgrid">
       <article class="card vol">
+        <div class="top"><h3>Graduate Finance Management Council (GFMC), UT Dallas</h3><span class="badge live">Active</span></div>
+        <div class="meta">Member | Jan 2025 – Present | Education</div>
+        <p>Contributing member of a student-led council that enhances the academic and professional experience of graduate finance students, supporting initiatives in student engagement, mentorship and program development, and events that build community in the MS Finance program.</p>
+      </article>
+      <article class="card vol">
         <div class="top"><h3>Indian Students Association at UT Dallas</h3><span class="badge live">Active</span></div>
         <div class="meta">Student Volunteer | Jan 2025 – Present | Social services</div>
         <p>Support the Indian student community through event logistics and social service initiatives: distribution, material setup and resource coordination, plus donation drives, outreach efforts and cultural programs.</p>
@@ -734,26 +782,51 @@ footer{padding:40px 0 48px;color:var(--muted);font-size:13px;display:flex;flex-w
         <div class="meta">Member | Feb 2025 – Present | Social services</div>
         <p>Member of a club affiliated with Lions Clubs International, taking part in community service projects across North Texas and club activities focused on social impact, leadership and networking.</p>
       </article>
+      <article class="card vol">
+        <div class="top"><h3>Marathi Mitra Mandal at UT Dallas</h3><span class="badge live">Active</span></div>
+        <div class="meta">Volunteer | Feb 2025 – Present</div>
+        <p>Promote Marathi culture and community among UT Dallas students by organizing and supporting cultural events, festivals and social gatherings that celebrate Maharashtrian traditions.</p>
+      </article>
+      <article class="card vol">
+        <div class="top"><h3>Scout and Guide Trust</h3></div>
+        <div class="meta">Group Leader | Jun 2017 – Mar 2019 | Education</div>
+        <p>Led a group of scouts in community service initiatives and skill-building, with hands-on training in CPR, first aid, rope knotting and outdoor cooking. Helped organize camps and service drives focused on teamwork and preparedness for natural calamities.</p>
+      </article>
     </div>
-    <a class="morelink" href="https://www.linkedin.com/in/ajaaypatil/details/volunteering-experiences/" target="_blank" rel="noopener">See all 5 on LinkedIn</a>
   </div>
 </section>
 
 <section id="recommendations">
   <div class="wrap">
     <div class="eyebrow"><b>08</b><i></i>Recommendations</div>
-    <h2>What people I’ve worked with <span class="grad">say.</span></h2>
+    <h2>Five recommendations from <span class="grad">managers and professors.</span></h2>
     <div class="rgrid">
       <figure class="card rec" style="margin:0">
-        <p>“I had the pleasure of supervising Ajay as a student worker for JSOM Online, and he consistently proved to be someone our team could depend on. … Ajay is reliable, adaptable, and a strong communicator. I truly enjoyed working with him and would confidently recommend him to any team looking for someone who is dependable, motivated, and ready to contribute.”</p>
+        <p>“I had the pleasure of supervising Ajay as a student worker for JSOM Online, and he consistently proved to be someone our team could depend on. He approached every task with professionalism, communicated well, and consistently produced high-quality work.</p>
+        <p>Ajay stood out for his willingness to learn and problem-solve. When asked to take on a new skill or unfamiliar task, he was quick to learn, ask thoughtful questions, and put those skills into practice. He was also someone our team could count on to help find solutions when challenges came up.</p>
+        <p>Ajay is reliable, adaptable, and a strong communicator. I truly enjoyed working with him and would confidently recommend him to any team looking for someone who is dependable, motivated, and ready to contribute.”</p>
         <figcaption class="who"><div class="av" aria-hidden="true">MC</div><div><b>Marie Cloud</b><span>Instructional Designer | Educator. Managed Ajay directly, Sep 2026</span></div></figcaption>
       </figure>
       <figure class="card rec" style="margin:0">
+        <p>“Ajay was my student at the University of Texas at Dallas, Naveen Jindal School of Management, where he is working towards his MS in Finance. Ajay is a very astute and analytical thinker, providing valuable conversation and strong business acumen. He is very forward-thinking and recognizes the importance of teamwork, collaboration, and building a strong culture. As a student, Ajay showed the ability to be a positive influence and motivator. Ajay was always willing to contribute to classroom conversations and shared his passion for the finance industry.</p>
+        <p>He has a certification in Financial Markets from Yale University and a Behavioral Finance certification from Duke University – The Fuqua School of Business. His passion for the financial industry is evident in his studies, certifications, and three previous internships as a Business Analyst, International Finance Intern, and Capital Market Analyst. I have no doubt that Ajay will make an outstanding addition to any organization. I highly recommend him for your consideration.”</p>
+        <figcaption class="who"><div class="av" aria-hidden="true">BS</div><div><b>Brenda Siri, MA</b><span>President &amp; CEO, Executive Search. Ajay’s teacher at UT Dallas, Apr 2025</span></div></figcaption>
+      </figure>
+    </div>
+    <div class="rgrid3">
+      <figure class="card rec small" style="margin:0">
+        <p>“Ajay was my student in my negotiation and dispute resolution class. I watched him move from deeply considering material and being uncomfortable speaking up to making smart, strategic requests. He not only increased his confidence in expressing his thoughts and participating in discussions, he is leading the efforts to add a negotiation club back to our university. As you can see by his background, Ajay is motivated and willing to take on challenges. The fact that he asked me to participate as the club’s advisor and craft this recommendation are proof of his tenacity to conquer the ‘tough stuff.’ You’ll find that he will add value to your organization as well.”</p>
+        <figcaption class="who"><div class="av" aria-hidden="true">LS</div><div><b>Linda Swindling, JD, CSP, CPAE</b><span>Keynote Speaker &amp; Professor, Negotiation. Ajay’s teacher, May 2025</span></div></figcaption>
+      </figure>
+      <figure class="card rec small" style="margin:0">
+        <p>“Ajay served as my tech TA for my Summer semester graduate course at UTD. He showed up on time, everytime and was prepared every class. He even saved me a couple of times when I was struggling with some Microsoft Teams-related items. I highly recommend Ajay. His work ethic is solid, which is one of the most vital characteristics of a good employee!”</p>
+        <figcaption class="who"><div class="av" aria-hidden="true">DZ</div><div><b>Daniel Zale, IMBA, MS-RECM, CCIM</b><span>Real Estate Finance Professional &amp; Lecturer. Managed Ajay directly, Sep 2026</span></div></figcaption>
+      </figure>
+      <figure class="card rec small" style="margin:0">
         <p>“I had the pleasure of working with Ajay during the Summer 2026 semester at UTD, where he assisted with a course I taught. Ajay is extremely knowledgeable, reliable, and professional. By effectively facilitating instruction delivery, he significantly enhanced both the overall course experience and student outcomes. I highly recommend him for any future academic or professional endeavors.”</p>
         <figcaption class="who"><div class="av" aria-hidden="true">JH</div><div><b>Jim Harbur</b><span>C-IV Asset Management LLC. Worked with Ajay at UTD, Sep 2026</span></div></figcaption>
       </figure>
     </div>
-    <a class="morelink" href="https://www.linkedin.com/in/ajaaypatil/details/recommendations/" target="_blank" rel="noopener">Read all 5 recommendations on LinkedIn</a>
   </div>
 </section>
 
