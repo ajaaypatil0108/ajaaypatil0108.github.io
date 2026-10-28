@@ -4,180 +4,298 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ajay Patil | MS Finance, UT Dallas</title>
-<meta name="description" content="Ajay Patil: MS Finance at The University of Texas at Dallas. Experience, projects, education, certifications and recommendations.">
-<meta name="theme-color" content="#0F1F1A">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F1F1A'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23F08A24' text-anchor='middle'%3EAP%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Ajay Patil: MS Finance at The University of Texas at Dallas. Financial analysis, FP&A and AI in finance. Experience, projects, education, certifications and recommendations.">
+<meta name="theme-color" content="#0E0E10">
+<meta property="og:title" content="Ajay Patil | MS Finance, UT Dallas">
+<meta property="og:description" content="Financial analysis, FP&A and AI in finance. Experience, projects and recommendations.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23F5A524'/%3E%3Cstop offset='1' stop-color='%23E8590C'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%230E0E10'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-weight='800' font-size='26' fill='url(%23g)' text-anchor='middle'%3EAP%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0F1F1A;        /* evergreen ink */
-  --surf:#152A23;      /* raised surface */
-  --surf2:#1B342C;
-  --line:#26443A;
-  --text:#EAF0EC;
-  --muted:#9DB3AA;
-  --orange:#F08A24;    /* UT Dallas orange */
-  --green:#6CC596;     /* UT Dallas green, lifted for dark */
-  --sand:#D9C7A5;      /* education / program row */
-  --serif:"Newsreader",Georgia,serif;
-  --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --bg:#0E0E10; --surf:#16161A; --surf2:#1C1C20; --line:#2A2A2F;
+  --text:#F2EDE8; --muted:#A39A92;
+  --amber:#F5A524; --orange:#E8590C; --comet:#F08A24; --green:#3DBE8B; --mint:#8FE3C0;
+  --grad:linear-gradient(90deg,#F5A524 0%,#F08A24 45%,#E8590C 100%);
+  --grad2:linear-gradient(90deg,#F5A524,#3DBE8B);
+  --r:18px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
-a{color:var(--text);text-decoration-color:var(--orange);text-underline-offset:3px}
-a:hover{color:var(--orange)}
-:focus-visible{outline:2px solid var(--orange);outline-offset:3px;border-radius:4px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
 @media (max-width:600px){.wrap{padding:0 16px}}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.grad2{background:var(--grad2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.muted{color:var(--muted)}
 
 /* nav */
-nav{position:sticky;top:0;z-index:10;background:rgba(15,31,26,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;gap:24px;height:56px}
-nav .mark{font:600 20px/1 var(--serif);color:var(--orange);text-decoration:none;flex:none}
-nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none}
-nav ul::-webkit-scrollbar{display:none}
-nav ul a{color:var(--muted);text-decoration:none;font-size:14px;white-space:nowrap}
+nav{position:sticky;top:0;z-index:20;background:rgba(14,14,16,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:60px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:15px;flex:none}
+.brand .mono{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:var(--grad);color:#1A0E04;font-weight:800;font-size:13px}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+nav ul a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500;white-space:nowrap}
 nav ul a:hover{color:var(--text)}
+@media (max-width:900px){nav ul{display:none}}
 
 /* hero */
-header.hero{padding:88px 0 56px}
-.hero h1{font:500 clamp(48px,9vw,96px)/0.98 var(--serif);letter-spacing:-0.02em;margin:0 0 20px}
-.hero .headline{font-size:clamp(18px,2.4vw,22px);color:var(--text);max-width:40ch;margin:0 0 8px}
-.hero .where{color:var(--muted);margin:0 0 28px}
-.links{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:15px;background:var(--surf)}
-.btn.primary{background:var(--orange);border-color:var(--orange);color:#1A1006;font-weight:600}
-.btn.primary:hover{color:#1A1006;filter:brightness(1.08)}
-.btn svg{width:16px;height:16px;fill:currentColor}
-.facts{display:flex;flex-wrap:wrap;gap:32px;margin-top:48px;padding-top:24px;border-top:1px solid var(--line)}
-.facts div{min-width:120px}
-.facts b{display:block;font:500 30px/1.1 var(--serif)}
-.facts span{color:var(--muted);font-size:14px}
+.hero{position:relative;padding:96px 0 40px;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:56px 56px;mask-image:radial-gradient(ellipse 80% 70% at 60% 30%,#000 40%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 80% 70% at 60% 30%,#000 40%,transparent 100%)}
+.hero::after{content:"";position:absolute;z-index:-1;width:900px;height:700px;right:-220px;top:-260px;
+  background:radial-gradient(closest-side,rgba(240,138,36,.30),rgba(232,89,12,.10) 55%,transparent),radial-gradient(closest-side at 30% 80%,rgba(61,190,139,.16),transparent 70%);filter:blur(10px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:48px;align-items:center}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(22,22,26,.8);font-size:13px;color:var(--muted)}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(61,190,139,.18)}
+.hero h1{font-weight:800;font-size:clamp(46px,7.4vw,84px);line-height:1.0;letter-spacing:-0.035em;margin:22px 0 18px}
+.hero h1 .tagline{display:block;font-size:.62em;letter-spacing:-0.03em;line-height:1.08;margin-top:8px}
+.hero .lede{font-size:clamp(17px,1.8vw,19px);color:#CFC7BF;max-width:56ch;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;border:1px solid var(--line);background:var(--surf);color:var(--text);font-weight:600;font-size:15px;text-decoration:none;transition:border-color .15s,background .15s}
+.btn:hover{border-color:#3A3A41;background:var(--surf2)}
+.btn.primary{background:var(--grad);border:0;color:#1A0E04;box-shadow:0 8px 30px -8px rgba(240,138,36,.55)}
+.btn.primary:hover{filter:brightness(1.06)}
+.btn svg{width:17px;height:17px;fill:currentColor;flex:none}
+.byline{margin-top:20px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.tag-ok{font-size:12px;font-weight:700;padding:3px 9px;border-radius:7px;background:rgba(61,190,139,.14);color:var(--mint);border:1px solid rgba(61,190,139,.35)}
+
+/* profile card */
+.idcard{position:relative;background:linear-gradient(180deg,rgba(28,28,32,.92),rgba(22,22,26,.92));border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:0 30px 80px -30px rgba(0,0,0,.8)}
+.idcard::before{content:"";position:absolute;inset:-1px;border-radius:23px;padding:1px;background:linear-gradient(140deg,rgba(245,165,36,.55),transparent 40%,transparent 60%,rgba(61,190,139,.45));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.id-top{display:flex;gap:16px;align-items:center;margin-bottom:22px}
+.avatar{width:64px;height:64px;border-radius:18px;background:var(--grad);display:grid;place-items:center;font-weight:800;font-size:24px;color:#1A0E04;flex:none}
+.id-top b{display:block;font-size:18px}
+.id-top span{font-size:14px;color:var(--muted)}
+.id-rows{display:grid;gap:0}
+.id-row{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-top:1px solid var(--line);font-size:14px}
+.id-row span:first-child{color:var(--muted)}
+.id-row span:last-child{text-align:right;font-weight:600}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:56px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:20px}
+.stat b{display:block;font-weight:800;font-size:clamp(26px,3vw,34px);letter-spacing:-0.02em;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat span{display:block;font-size:13px;color:var(--muted);margin-top:6px}
+.stat.hl{background:linear-gradient(160deg,rgba(240,138,36,.16),rgba(22,22,26,1) 70%);border-color:rgba(240,138,36,.45)}
+.stat.hl2{background:linear-gradient(160deg,rgba(61,190,139,.14),rgba(22,22,26,1) 70%);border-color:rgba(61,190,139,.40)}
+
+/* ticker */
+.ticker{margin-top:56px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#121215;overflow:hidden;position:relative}
+.ticker::before,.ticker::after{content:"";position:absolute;top:0;bottom:0;width:80px;z-index:1;pointer-events:none}
+.ticker::before{left:0;background:linear-gradient(90deg,#121215,transparent)}
+.ticker::after{right:0;background:linear-gradient(270deg,#121215,transparent)}
+.tape{display:flex;width:max-content}
+.tape ul{display:flex;gap:0;list-style:none;margin:0;padding:0}
+.tape li{display:flex;align-items:center;gap:10px;padding:14px 26px;font-size:14px;font-weight:600;white-space:nowrap;border-right:1px solid var(--line)}
+.tape li i{font-style:normal;font-size:12px;font-weight:700}
+.tape li i.up{color:var(--green)}
+.tape li i.am{color:var(--amber)}
+@media (prefers-reduced-motion:no-preference){.tape{animation:tape 60s linear infinite}.ticker:hover .tape{animation-play-state:paused}@keyframes tape{to{transform:translateX(-50%)}}}
+@media (prefers-reduced-motion:reduce){.tape ul+ul{display:none}.ticker{overflow-x:auto}}
 
 /* sections */
-section{padding:64px 0;border-top:1px solid var(--line)}
-h2{font:500 clamp(30px,4.4vw,40px)/1.1 var(--serif);margin:0 0 28px;letter-spacing:-0.01em}
-h3{font:600 18px/1.35 var(--sans);margin:0}
-.sub{color:var(--muted);font-size:15px}
-p{max-width:72ch}
-.about p{font-size:18px;line-height:1.7}
+section{padding:96px 0 0}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.eyebrow b{color:var(--comet);font-weight:700}
+.eyebrow i{display:block;width:40px;height:1px;background:var(--line)}
+h2{font-weight:800;font-size:clamp(32px,4.6vw,48px);line-height:1.08;letter-spacing:-0.03em;margin:0 0 14px;max-width:24ch}
+.intro{font-size:17px;color:var(--muted);max-width:62ch;margin:0 0 36px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:var(--r)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:24px}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr}}
+.about-text{padding:30px}
+.about-text p{margin:0 0 16px;font-size:16.5px;line-height:1.75;color:#D9D1C9}
+.about-text p:last-child{margin:0}
+.focus{padding:30px}
+.focus h3{font-size:15px;margin:0 0 16px;font-weight:700}
+.focus ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.focus li{display:flex;gap:12px;align-items:flex-start;font-size:15px}
+.focus li svg{flex:none;width:20px;height:20px;margin-top:2px}
 
 /* gantt */
-.gantt{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:20px 20px 12px;margin:0 0 40px}
-.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--muted);margin-bottom:16px}
-.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
-.g-rows{position:relative}
-.g-row{display:grid;grid-template-columns:200px 1fr;align-items:center;gap:12px;min-height:34px}
-.g-label{font-size:14px;color:var(--text);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.g-label:hover{color:var(--orange)}
-.g-track{position:relative;height:34px}
-.g-bar{position:absolute;top:9px;height:16px;border-radius:5px;transform-origin:left center}
-.g-bar.int{background:var(--orange)}
-.g-bar.utd{background:var(--green)}
-.g-bar.edu{background:transparent;border:1.5px dashed var(--sand);height:12px;top:11px}
-.g-bar.live::after{content:"";position:absolute;right:-1px;top:-3px;bottom:-3px;width:2px;background:var(--text);opacity:.7}
-.g-grid{position:absolute;inset:0 0 0 212px;pointer-events:none}
-.g-grid span{position:absolute;top:0;bottom:0;border-left:1px solid var(--line)}
-.g-axis{display:grid;grid-template-columns:200px 1fr;gap:12px;margin-top:6px}
-.g-axis .ticks{position:relative;height:20px;font-size:12px;color:var(--muted)}
-.g-axis .ticks span{position:absolute;transform:translateX(4px)}
-@media (prefers-reduced-motion:no-preference){
-  .g-bar{animation:grow .9s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i) * 80ms)}
-  @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-}
-@media (max-width:700px){
-  .g-row{grid-template-columns:1fr;gap:0;min-height:0;margin-bottom:6px}
-  .g-label{font-size:13px;color:var(--muted)}
-  .g-track{height:22px}
-  .g-bar{top:3px}.g-bar.edu{top:5px}
-  .g-grid{inset:0}
-  .g-axis{grid-template-columns:1fr}
-  .g-axis>div:first-child{display:none}
+.chart{padding:24px}
+.chart-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;margin-bottom:18px}
+.chart-head h3{margin:0;font-size:15px;font-weight:700}
+.legend{display:flex;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--muted)}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.g{position:relative}
+.g-row{display:grid;grid-template-columns:230px 1fr;align-items:center;gap:14px;min-height:40px}
+.g-label{text-decoration:none;font-size:14px;line-height:1.25}
+.g-label b{display:block;font-weight:600}
+.g-label span{font-size:12px;color:var(--muted)}
+.g-label:hover b{color:var(--amber)}
+.g-track{position:relative;height:40px}
+.g-bar{position:absolute;top:12px;height:16px;border-radius:6px;transform-origin:left center}
+.g-bar.int{background:linear-gradient(90deg,#F5A524,#E8590C);box-shadow:0 0 18px -2px rgba(240,138,36,.55)}
+.g-bar.utd{background:linear-gradient(90deg,#3DBE8B,#8FE3C0);box-shadow:0 0 18px -2px rgba(61,190,139,.5)}
+.g-bar.prog{background:repeating-linear-gradient(135deg,rgba(242,237,232,.16) 0 6px,rgba(242,237,232,.05) 6px 12px);border:1px solid rgba(242,237,232,.35);height:14px;top:13px}
+.g-grid{position:absolute;top:0;bottom:0;left:244px;right:0;pointer-events:none}
+.g-grid span{position:absolute;top:0;bottom:0;border-left:1px dashed #2E2E34}
+.g-grid .today{border-left:1.5px solid var(--text);opacity:.85}
+.g-grid .today em{position:absolute;top:-22px;left:-18px;font-style:normal;font-size:11px;font-weight:700;color:var(--text);background:var(--surf2);border:1px solid var(--line);padding:1px 6px;border-radius:6px}
+.g-axis{display:grid;grid-template-columns:230px 1fr;gap:14px;margin-top:8px}
+.g-axis .ticks{position:relative;height:18px;font-size:12px;color:var(--muted)}
+.g-axis .ticks span{position:absolute;transform:translateX(6px)}
+.g-wrap{padding-top:22px}
+@media (prefers-reduced-motion:no-preference){.g.go .g-bar{animation:grow 1s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i)*90ms)}.g:not(.go) .g-bar{transform:scaleX(0)}@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}}
+@media (max-width:720px){
+  .g-row{grid-template-columns:1fr;gap:0;min-height:0;margin-bottom:4px}
+  .g-label b{font-size:13px}.g-label span{display:none}
+  .g-track{height:26px}.g-bar{top:4px}.g-bar.prog{top:5px}
+  .g-grid{left:0}.g-axis{grid-template-columns:1fr}.g-axis>div:first-child{display:none}
 }
 
-/* experience list */
-.org{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:28px 0;border-top:1px solid var(--line)}
-.org:first-of-type{border-top:0;padding-top:0}
-.org-name h3{font:500 22px/1.25 var(--serif)}
-.org-name .sub{margin-top:4px}
-.role{position:relative;padding:0 0 24px 22px}
-.role:last-child{padding-bottom:0}
-.role::before{content:"";position:absolute;left:0;top:8px;width:9px;height:9px;border-radius:50%;background:var(--dot,var(--orange))}
-.org.utd .role{--dot:var(--green)}
-.org.utd .role:not(:last-child)::after{content:"";position:absolute;left:4px;top:22px;bottom:4px;width:1px;background:var(--line)}
-.role .meta{color:var(--muted);font-size:14px;margin:2px 0 8px}
-.role ul{margin:0;padding-left:18px;max-width:72ch}
-.role li{margin:4px 0}
-.role .courses{margin:6px 0 8px;display:flex;flex-wrap:wrap;gap:6px}
-.chip{display:inline-block;font-size:13px;padding:3px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:var(--surf)}
-@media (max-width:700px){.org{grid-template-columns:1fr;gap:12px}}
+/* experience cards */
+.xp{display:grid;gap:18px;margin-top:22px}
+.org{padding:28px}
+.org-head{display:flex;gap:16px;align-items:center;margin-bottom:22px}
+.logo{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-weight:800;font-size:16px;flex:none;border:1px solid var(--line)}
+.logo.utd{background:linear-gradient(140deg,rgba(240,138,36,.22),rgba(61,190,139,.22));color:var(--text)}
+.logo.int{background:rgba(240,138,36,.12);color:var(--amber)}
+.org-head h3{margin:0;font-size:19px;font-weight:700;letter-spacing:-0.01em}
+.org-head span{font-size:14px;color:var(--muted)}
+.roles{position:relative;display:grid;gap:26px;padding-left:26px}
+.roles::before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--green),rgba(61,190,139,.15))}
+.roles.int::before{background:linear-gradient(180deg,var(--comet),rgba(240,138,36,.15))}
+.role{position:relative}
+.role::before{content:"";position:absolute;left:-26px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--green)}
+.roles.int .role::before{border-color:var(--comet)}
+.role.now::before{background:var(--green);box-shadow:0 0 0 5px rgba(61,190,139,.18)}
+.role-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;align-items:baseline}
+.role h4{margin:0;font-size:16.5px;font-weight:700}
+.when{font-size:13px;font-weight:600;color:var(--muted);white-space:nowrap}
+.where{font-size:13px;color:var(--muted);margin:2px 0 10px}
+.role ul{margin:0;padding-left:18px;color:#D3CBC3;font-size:15px}
+.role li{margin:5px 0}
+.role li::marker{color:#5A5A62}
+.badge{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:6px;margin-left:8px;vertical-align:2px}
+.badge.live{background:rgba(61,190,139,.14);color:var(--mint);border:1px solid rgba(61,190,139,.35)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 10px}
+.chip{display:inline-block;font-size:12.5px;font-weight:500;padding:4px 10px;border-radius:8px;background:var(--surf2);border:1px solid var(--line);color:#CFC7BF}
+.reach{display:inline-flex;align-items:baseline;gap:6px;margin:0 0 8px;font-size:14px;color:var(--muted)}
+.reach b{font-size:20px;font-weight:800;color:var(--text)}
+.int-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:1000px){.int-grid{grid-template-columns:1fr}}
+.int-grid .org-head{margin-bottom:16px}
 
 /* projects */
-.proj-list{display:grid;gap:20px}
-.proj{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:28px;padding:28px;background:var(--surf);border:1px solid var(--line);border-radius:16px}
-.proj.lead{border-color:color-mix(in srgb,var(--orange) 45%,var(--line))}
-.proj h3{font:500 24px/1.25 var(--serif)}
-.proj .meta{color:var(--muted);font-size:14px;margin:6px 0 12px}
-.proj p{margin:0 0 12px}
-.proj .tags{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0}
-.proj .plinks{display:flex;gap:18px;flex-wrap:wrap;font-size:15px}
-.kpi{border-left:2px solid var(--orange);padding-left:16px;align-self:start}
-.kpi b{display:block;font:500 40px/1.05 var(--serif);font-variant-numeric:tabular-nums}
-.kpi span{display:block;color:var(--muted);font-size:14px;margin:4px 0 16px}
-.kpi span:last-child{margin-bottom:0}
-@media (max-width:760px){.proj{grid-template-columns:1fr;padding:20px}}
+.pgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media (max-width:860px){.pgrid{grid-template-columns:1fr}}
+.proj{display:flex;flex-direction:column;overflow:hidden;position:relative;transition:border-color .2s,transform .2s}
+.proj:hover{border-color:color-mix(in srgb,var(--c) 55%,var(--line))}
+.proj .cover{display:block;aspect-ratio:1200/630;overflow:hidden;border-bottom:1px solid var(--line);background:#111}
+.proj .cover img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.proj:hover .cover img{transform:scale(1.025)}
+.pbody{padding:24px;display:flex;flex-direction:column;gap:12px;flex:1}
+.pmeta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:12.5px;color:var(--muted)}
+.pmeta .kind{font-weight:700;color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent);border:1px solid color-mix(in srgb,var(--c) 40%,transparent);padding:2px 8px;border-radius:6px}
+.proj h3{margin:0;font-size:20px;line-height:1.3;font-weight:700;letter-spacing:-0.01em}
+.proj p{margin:0;color:#CFC7BF;font-size:15px}
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:4px}
+.kpis.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.kpi{background:var(--surf2);border:1px solid var(--line);border-radius:12px;padding:12px}
+.kpi b{display:block;font-weight:800;font-size:22px;letter-spacing:-0.02em;color:var(--c);font-variant-numeric:tabular-nums;line-height:1.15}
+.kpi span{display:block;font-size:12px;color:var(--muted);margin-top:4px;line-height:1.35}
+.plinks{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+.plinks a{font-size:14px;font-weight:600;text-decoration:none;padding:8px 13px;border-radius:10px;border:1px solid var(--line);background:var(--surf2)}
+.plinks a.go{background:color-mix(in srgb,var(--c) 18%,var(--surf2));border-color:color-mix(in srgb,var(--c) 45%,var(--line))}
+.plinks a:hover{border-color:var(--c)}
+.proj.feature{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
+.proj.feature .cover{aspect-ratio:auto;border-bottom:0;border-right:1px solid var(--line);display:flex;align-items:center;background:#0E0E10}
+.proj.feature .cover img{height:auto}
+@media (max-width:860px){.proj.feature{display:flex}.proj.feature .cover{aspect-ratio:1200/630;border-right:0;border-bottom:1px solid var(--line)}}
+.star{position:absolute;top:14px;left:14px;font-size:12px;font-weight:700;padding:5px 10px;border-radius:8px;background:rgba(14,14,16,.82);border:1px solid rgba(229,55,46,.5);color:#F0857C;backdrop-filter:blur(6px)}
 
 /* education */
-.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.card{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:24px}
-.card h3{font:500 22px/1.25 var(--serif)}
-.card .meta{color:var(--muted);font-size:14px;margin:6px 0 12px}
-.card p{margin:0 0 10px}
-.card .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.egrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media (max-width:860px){.egrid{grid-template-columns:1fr}}
+.edu{padding:28px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:start}
+.ring{position:relative;width:104px;height:104px}
+.ring svg{width:104px;height:104px;transform:rotate(-90deg)}
+.ring .v{position:absolute;inset:0;display:grid;place-items:center;text-align:center}
+.ring .v b{display:block;font-size:22px;font-weight:800;line-height:1}
+.ring .v span{display:block;font-size:11px;color:var(--muted);margin-top:3px}
+.edu h3{margin:0 0 4px;font-size:19px;font-weight:700}
+.edu .deg{font-size:15px;font-weight:600;color:#E3DBD3}
+.edu .meta{font-size:13px;color:var(--muted);margin:4px 0 12px}
+.edu p{margin:0 0 10px;font-size:14.5px;color:#CFC7BF}
+.schol{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;padding:6px 11px;border-radius:9px;background:rgba(245,165,36,.12);border:1px solid rgba(245,165,36,.4);color:#F7C46A;margin-bottom:12px}
+.courses{grid-column:1/-1;padding-top:16px;border-top:1px solid var(--line)}
+.courses h4{margin:0 0 10px;font-size:13px;font-weight:600;color:var(--muted)}
+@media (max-width:520px){.edu{grid-template-columns:1fr}}
 
 /* skills */
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:28px}
-.skills h3{font-size:15px;color:var(--muted);font-weight:500;margin-bottom:10px}
-.skills .chips{display:flex;flex-wrap:wrap;gap:6px}
-.skills .chip{color:var(--text)}
+.sgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media (max-width:1000px){.sgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.sgrid{grid-template-columns:1fr}}
+.skill{padding:24px}
+.skill .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;margin-bottom:14px;background:color-mix(in srgb,var(--c) 14%,transparent);border:1px solid color-mix(in srgb,var(--c) 40%,transparent)}
+.skill .ic svg{width:20px;height:20px;stroke:var(--c);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.skill h3{margin:0 0 12px;font-size:16px;font-weight:700}
 
-/* certs */
-.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0 32px}
-.cert{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
-.cert span{color:var(--muted);font-size:14px;text-align:right;flex:none}
+/* certifications */
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.cert{display:flex;gap:14px;align-items:center;padding:16px}
+.cert .iss{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:12px;font-weight:800;background:var(--surf2);border:1px solid var(--line);flex:none;letter-spacing:-0.02em;color:var(--amber)}
+.cert b{display:block;font-size:14.5px;font-weight:600;line-height:1.3}
+.cert span{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.morelink{display:inline-flex;margin-top:18px;font-size:14px;font-weight:600;color:var(--amber);text-decoration:none}
+.morelink:hover{text-decoration:underline;text-underline-offset:3px}
 
 /* volunteering */
-.vol{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.vgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media (max-width:860px){.vgrid{grid-template-columns:1fr}}
+.vol{padding:26px}
+.vol .top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.vol h3{margin:0;font-size:18px;font-weight:700}
+.vol .meta{font-size:13px;color:var(--muted);margin-bottom:12px}
+.vol p{margin:0;font-size:15px;color:#CFC7BF}
 
 /* recommendations */
-.recs{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
-blockquote{margin:0;background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:28px}
-blockquote p{font:400 19px/1.55 var(--serif);margin:0 0 20px}
-blockquote footer b{display:block;font-weight:600}
-blockquote footer span{color:var(--muted);font-size:14px}
+.rgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media (max-width:860px){.rgrid{grid-template-columns:1fr}}
+.rec{padding:30px;position:relative;overflow:hidden}
+.rec::after{content:"\201C";position:absolute;right:18px;top:-22px;font-size:130px;font-weight:800;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.22;z-index:0}
+.rec p,.rec .who{position:relative;z-index:1}
+.rec p{margin:0 0 22px;font-size:17px;line-height:1.65;color:#E6DED6}
+.who{display:flex;gap:12px;align-items:center}
+.who .av{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:14px;background:var(--surf2);border:1px solid var(--line);color:var(--mint)}
+.who b{display:block;font-size:15px}
+.who span{display:block;font-size:13px;color:var(--muted)}
 
-/* posts */
-.posts{list-style:none;margin:0;padding:0}
-.posts li{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
-.posts time{color:var(--muted);font-size:14px;padding-top:2px}
-@media (max-width:600px){.posts li{grid-template-columns:1fr;gap:2px}}
+/* activity */
+.posts{position:relative;display:grid;gap:12px;padding-left:28px}
+.posts::before{content:"";position:absolute;left:6px;top:10px;bottom:10px;width:2px;background:linear-gradient(180deg,var(--comet),rgba(61,190,139,.6))}
+.post{position:relative;padding:16px 20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 18px;align-items:baseline}
+.post::before{content:"";position:absolute;left:-27px;top:21px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--comet)}
+.post b{font-size:15.5px;font-weight:600}
+.post time{font-size:13px;color:var(--muted);white-space:nowrap}
 
-.more{margin-top:20px;color:var(--muted);font-size:15px}
-
-footer.site{padding:64px 0 48px;border-top:1px solid var(--line)}
-footer.site h2{margin-bottom:12px}
-footer.site .fine{color:var(--muted);font-size:13px;margin-top:40px}
+/* contact */
+.contact{margin:96px 0 0;padding:56px 40px;border-radius:26px;position:relative;overflow:hidden;isolation:isolate;border:1px solid var(--line);background:var(--surf)}
+.contact::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(600px 300px at 85% 0%,rgba(240,138,36,.28),transparent 70%),radial-gradient(500px 280px at 0% 100%,rgba(61,190,139,.18),transparent 70%)}
+.contact h2{max-width:none}
+.contact p{color:#CFC7BF;font-size:17px;max-width:56ch;margin:0 0 26px}
+@media (max-width:600px){.contact{padding:36px 22px}}
+footer{padding:40px 0 48px;color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 </style>
 </head>
 <body>
 
 <nav aria-label="Sections">
   <div class="wrap">
-    <a class="mark" href="#top" aria-label="Back to top">AP</a>
+    <a class="brand" href="#top"><span class="mono">AP</span>Ajay Patil</a>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -185,7 +303,6 @@ footer.site .fine{color:var(--muted);font-size:13px;margin-top:40px}
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#volunteering">Volunteering</a></li>
       <li><a href="#recommendations">Recommendations</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -193,168 +310,232 @@ footer.site .fine{color:var(--muted);font-size:13px;margin-top:40px}
 </nav>
 
 <main id="top">
+
 <header class="hero">
   <div class="wrap">
-    <h1>Ajay Patil</h1>
-    <p class="headline">MS Finance @ UT Dallas | Financial Analysis | FP&amp;A | AI in Finance</p>
-    <p class="where">Dallas, Texas, United States</p>
-    <div class="links">
-      <a class="btn primary" href="mailto:ajaaypatil0108@gmail.com">Email me</a>
-      <a class="btn" href="https://www.linkedin.com/in/ajaaypatil/" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg>LinkedIn</a>
-      <a class="btn" href="https://github.com/ajaaypatil0108" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>GitHub</a>
+    <div class="hero-grid">
+      <div>
+        <span class="pill"><span class="dot"></span>MS Finance, UT Dallas | Graduating December 2026</span>
+        <h1>Ajay Patil<span class="tagline grad">Financial Analysis, FP&amp;A &amp; AI in Finance</span></h1>
+        <p class="lede">MS Finance student at The University of Texas at Dallas and Program Excellence Scholarship recipient, building finance models, dashboards and case studies.</p>
+        <div class="cta">
+          <a class="btn primary" href="mailto:ajaaypatil0108@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.3V17h16V7.3l-8 5.3zM5.8 7 12 11.1 18.2 7z"/></svg>Email me</a>
+          <a class="btn" href="#projects">View projects</a>
+          <a class="btn" href="https://www.linkedin.com/in/ajaaypatil/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg>LinkedIn</a>
+          <a class="btn" href="https://github.com/ajaaypatil0108" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>GitHub</a>
+        </div>
+        <div class="byline"><span>Dallas, Texas, United States</span><span class="tag-ok">Open to full-time roles</span></div>
+      </div>
+
+      <aside class="idcard" aria-label="At a glance">
+        <div class="id-top">
+          <div class="avatar" aria-hidden="true">AP</div>
+          <div><b>Ajay Patil</b><span>Naveen Jindal School of Management</span></div>
+        </div>
+        <div class="id-rows">
+          <div class="id-row"><span>Program</span><span>MS Finance (STEM)</span></div>
+          <div class="id-row"><span>GPA</span><span>3.75 / 4.00</span></div>
+          <div class="id-row"><span>Scholarship</span><span>Program Excellence</span></div>
+          <div class="id-row"><span>Current role</span><span>Student Assistant, JSOM Online</span></div>
+          <div class="id-row"><span>Undergraduate</span><span>BCom, University of Mumbai</span></div>
+          <div class="id-row"><span>Platforms</span><span>Bloomberg | Capital IQ | LSEG</span></div>
+        </div>
+      </aside>
     </div>
-    <div class="facts">
-      <div><b>3.75</b><span>MS Finance GPA</span></div>
-      <div><b>Dec 2026</b><span>Expected graduation</span></div>
-      <div><b>3</b><span>Internships</span></div>
-      <div><b>240+</b><span>Students supported as a TA in Spring 2026</span></div>
+
+    <div class="stats">
+      <div class="stat hl"><b>3.75</b><span>MS Finance GPA, UT Dallas</span></div>
+      <div class="stat"><b>5</b><span>Finance and strategy projects on GitHub</span></div>
+      <div class="stat"><b>240+</b><span>Students supported as a TA, Spring 2026</span></div>
+      <div class="stat hl2"><b>3</b><span>Internships in capital markets, FX and business analysis</span></div>
+    </div>
+  </div>
+
+  <div class="ticker" aria-label="Skills and tools">
+    <div class="tape">
+      <ul>
+        <li>Three-Statement Modeling <i class="up">FP&amp;A</i></li>
+        <li>Variance Analysis <i class="am">Budget vs. actual</i></li>
+        <li>Power BI <i class="up">DAX</i></li>
+        <li>Power Query <i class="am">ETL</i></li>
+        <li>Real-Estate Underwriting <i class="up">IRR | DSCR</i></li>
+        <li>Scenario Analysis <i class="am">Base | Bull | Bear</i></li>
+        <li>Bloomberg Terminal <i class="up">BMC</i></li>
+        <li>Capital IQ <i class="am">S&amp;P Global</i></li>
+        <li>LSEG Workspace <i class="up">Finance Essentials</i></li>
+        <li>Python <i class="am">DataCamp</i></li>
+        <li>SQL <i class="up">Data</i></li>
+        <li>Asset Allocation <i class="am">Multi-asset</i></li>
+      </ul>
+      <ul aria-hidden="true">
+        <li>Three-Statement Modeling <i class="up">FP&amp;A</i></li>
+        <li>Variance Analysis <i class="am">Budget vs. actual</i></li>
+        <li>Power BI <i class="up">DAX</i></li>
+        <li>Power Query <i class="am">ETL</i></li>
+        <li>Real-Estate Underwriting <i class="up">IRR | DSCR</i></li>
+        <li>Scenario Analysis <i class="am">Base | Bull | Bear</i></li>
+        <li>Bloomberg Terminal <i class="up">BMC</i></li>
+        <li>Capital IQ <i class="am">S&amp;P Global</i></li>
+        <li>LSEG Workspace <i class="up">Finance Essentials</i></li>
+        <li>Python <i class="am">DataCamp</i></li>
+        <li>SQL <i class="up">Data</i></li>
+        <li>Asset Allocation <i class="am">Multi-asset</i></li>
+      </ul>
     </div>
   </div>
 </header>
 
-<section id="about" class="about">
+<section id="about">
   <div class="wrap">
-    <h2>About</h2>
-    <p>Aspiring finance professional currently pursuing a Master of Science in Finance at The University of Texas at Dallas, where I was awarded the Program Excellence Scholarship. With a strong foundation in financial accounting and auditing from the University of Mumbai, I have honed my skills in data analytics, capital markets, and international finance through hands-on internships with leading firms.</p>
-    <p>During my internships, I have automated data processes, conducted global financial market analysis, and optimized client portfolios, improving efficiency and decision-making across the board. My academic projects have explored real estate investment analysis, portfolio management strategies, and marketing for fintech products, strengthening my problem-solving and analytical capabilities.</p>
-    <p>I am passionate about leveraging data-driven strategies to drive financial decision-making and risk management. As I continue to develop my expertise, I am eager to connect with professionals and contribute to the evolving finance landscape. Let’s connect and explore opportunities in consulting, financial analysis, and risk management.</p>
+    <div class="eyebrow"><b>01</b><i></i>About</div>
+    <h2>From commerce in Mumbai to <span class="grad">finance in Dallas.</span></h2>
+    <div class="about-grid">
+      <div class="card about-text">
+        <p>Aspiring finance professional currently pursuing a Master of Science in Finance at The University of Texas at Dallas, where I was awarded the Program Excellence Scholarship. With a strong foundation in financial accounting and auditing from the University of Mumbai, I have honed my skills in data analytics, capital markets, and international finance through hands-on internships with leading firms.</p>
+        <p>During my internships, I have automated data processes, conducted global financial market analysis, and optimized client portfolios, improving efficiency and decision-making across the board. My academic projects have explored real estate investment analysis, portfolio management strategies, and marketing for fintech products, strengthening my problem-solving and analytical capabilities.</p>
+        <p>I am passionate about leveraging data-driven strategies to drive financial decision-making and risk management. As I continue to develop my expertise, I am eager to connect with professionals and contribute to the evolving finance landscape. Let’s connect and explore opportunities in consulting, financial analysis, and risk management.</p>
+      </div>
+      <div class="card focus">
+        <h3>Open to opportunities in</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#F5A524" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg>Financial analysis and FP&amp;A</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#3DBE8B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/></svg>Risk management</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#F08A24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Consulting</li>
+        </ul>
+        <h3 style="margin-top:26px">Where I am</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#A39A92" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Dallas, Texas, United States</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#A39A92" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10 12 5l8 5-8 5z"/><path d="M8 12.5V16c2.5 2 5.5 2 8 0v-3.5"/></svg>Graduating December 2026</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
 <section id="experience">
   <div class="wrap">
-    <h2>Experience</h2>
+    <div class="eyebrow"><b>02</b><i></i>Experience</div>
+    <h2>Three internships, then <span class="grad">five roles at UT Dallas.</span></h2>
+    <p class="intro">Remote internships in India across capital markets, international finance and business analysis, followed by teaching, orientation and online-learning roles at the Naveen Jindal School of Management.</p>
 
-    <figure class="gantt" aria-label="Timeline of roles, January 2024 to December 2026">
-      <div class="legend">
-        <span><i style="background:var(--orange)"></i>Internships</span>
-        <span><i style="background:var(--green)"></i>UT Dallas roles</span>
-        <span><i style="border:1.5px dashed var(--sand)"></i>MS Finance program</span>
+    <figure class="card chart" style="margin:0">
+      <div class="chart-head">
+        <h3>Career timeline, January 2024 to December 2026</h3>
+        <div class="legend">
+          <span><i style="background:linear-gradient(90deg,#F5A524,#E8590C)"></i>Internships</span>
+          <span><i style="background:linear-gradient(90deg,#3DBE8B,#8FE3C0)"></i>UT Dallas roles</span>
+          <span><i style="background:rgba(242,237,232,.2);border:1px solid rgba(242,237,232,.4)"></i>MS Finance program</span>
+        </div>
       </div>
-      <div class="g-rows" id="gantt"></div>
+      <div class="g-wrap"><div class="g" id="gantt"></div></div>
       <div class="g-axis"><div></div><div class="ticks" id="ticks"></div></div>
     </figure>
 
-    <div class="org utd" id="exp-utd">
-      <div class="org-name">
-        <h3>The University of Texas at Dallas</h3>
-        <div class="sub">Part-time, Jun 2025 to present</div>
-      </div>
-      <div>
-        <div class="role" id="exp-jsom">
-          <h3>Student Assistant / Technical Assistant, JSOM Online Team</h3>
-          <div class="meta">Aug 2026 to present | Dallas, Texas | Hybrid</div>
-          <ul>
-            <li>Serve as the primary online support specialist and Microsoft Teams co-host for 3 live synchronous JSOM courses (Fall 2026), acting as the faculty’s technical partner in every session.</li>
-            <li>Manage live session logistics, including attendance tracking, chat and Q&amp;A monitoring, and deployment of engagement apps and tools.</li>
-            <li>Provide real-time technical troubleshooting to keep synchronous sessions running smoothly for faculty and students.</li>
-            <li>Partner with faculty to strengthen course design and bring course materials into ADA compliance.</li>
-            <li>Produce and edit instructional videos and job aids that help faculty and students navigate online and in-person courses.</li>
-            <li>Collaborate with the eLearning department to train faculty and students on teaching tools and keep faculty current on newly released features.</li>
-            <li>Use AI tools to build support resources faster and introduce faculty to AI for automating repetitive tasks and basic troubleshooting.</li>
-          </ul>
+    <div class="xp">
+      <article class="card org" id="exp-utd">
+        <div class="org-head">
+          <div class="logo utd" aria-hidden="true">UTD</div>
+          <div><h3>The University of Texas at Dallas</h3><span>Part-time | 1 yr 5 mos | Naveen Jindal School of Management</span></div>
         </div>
-        <div class="role">
-          <h3>Student Assistant / Technical Assistant, JSOM Online Team</h3>
-          <div class="meta">May 2026 to Aug 2026 | On-site</div>
-          <ul>
-            <li>Served as the primary online support specialist for JSOM faculty, ensuring seamless delivery of live synchronous courses via Microsoft Teams as co-host and faculty-facing technical partner.</li>
-            <li>Partnered directly with faculty to manage live session logistics, including chat moderation, attendance tracking, polls, and breakout room coordination.</li>
-            <li>Provided real-time technical troubleshooting for faculty-side audio, video, presentation, and platform access issues during live class sessions.</li>
-            <li>Developed ADA-compliant job aids and course materials across PowerPoint, Word, and PDF formats, leveraging Teams Premium and AI-enabled features to enhance faculty course delivery.</li>
-            <li>Collaborated with the instructional design team to support course operations and maintain a consistent online learning experience.</li>
-          </ul>
-        </div>
-        <div class="role" id="exp-ta">
-          <h3>Graduate Teaching Assistant</h3>
-          <div class="meta">Jan 2026 to May 2026 | Dallas, Texas | Hybrid</div>
-          <p class="sub" style="margin:0 0 6px">Supported 240+ undergraduate and graduate students across four finance courses at the Naveen Jindal School of Management.</p>
-          <div class="courses">
-            <span class="chip">FIN 4345 Financial Information &amp; Analysis</span>
-            <span class="chip">FIN 6307 Mathematical Methods for Finance (in-person &amp; online)</span>
-            <span class="chip">FTEC 6V96 Financial Data Analytics</span>
+        <div class="roles">
+          <div class="role now" id="exp-jsom">
+            <div class="role-top"><h4>Student Assistant / Technical Assistant, JSOM Online Team <span class="badge live">Current</span></h4><span class="when">Aug 2026 – Present</span></div>
+            <div class="where">Dallas, Texas | Hybrid</div>
+            <ul>
+              <li>Serve as the primary online support specialist and Microsoft Teams co-host for 3 live synchronous JSOM courses (Fall 2026), acting as the faculty’s technical partner in every session.</li>
+              <li>Manage live session logistics, including attendance tracking, chat and Q&amp;A monitoring, and deployment of engagement apps and tools.</li>
+              <li>Provide real-time technical troubleshooting to keep synchronous sessions running smoothly for faculty and students.</li>
+              <li>Partner with faculty to strengthen course design and bring course materials into ADA compliance.</li>
+              <li>Produce and edit instructional videos and job aids that help faculty and students navigate online and in-person courses.</li>
+              <li>Collaborate with the eLearning department to train faculty and students on teaching tools and keep faculty current on newly released features.</li>
+              <li>Use AI tools to build support resources faster and introduce faculty to AI for automating repetitive tasks and basic troubleshooting.</li>
+            </ul>
           </div>
-          <ul>
-            <li>Prepared instructional materials, graded assignments and exams, and provided one-on-one academic guidance during office hours.</li>
-            <li>Managed course records, grade tracking, and performance analytics using Blackboard LMS to support faculty reporting and monitor student progress.</li>
-            <li>Helped students strengthen analytical skills in financial data management, valuation, and quantitative methods.</li>
-          </ul>
-        </div>
-        <div class="role">
-          <h3>Graduate Teaching Assistant</h3>
-          <div class="meta">Aug 2025 to Dec 2025 | Dallas, Texas | Hybrid</div>
-          <p class="sub" style="margin:0 0 6px">Supported 200+ undergraduate and graduate students across three finance courses at the Naveen Jindal School of Management.</p>
-          <div class="courses">
-            <span class="chip">FIN 4345 Financial Information &amp; Analysis</span>
-            <span class="chip">FIN 6307 Mathematical Methods for Finance (in-person &amp; online)</span>
+          <div class="role">
+            <div class="role-top"><h4>Student Assistant / Technical Assistant, JSOM Online Team</h4><span class="when">May 2026 – Aug 2026</span></div>
+            <div class="where">On-site</div>
+            <ul>
+              <li>Served as the primary online support specialist for JSOM faculty, ensuring seamless delivery of live synchronous courses via Microsoft Teams as co-host and faculty-facing technical partner.</li>
+              <li>Partnered directly with faculty to manage live session logistics, including chat moderation, attendance tracking, polls, and breakout room coordination.</li>
+              <li>Provided real-time technical troubleshooting for faculty-side audio, video, presentation, and platform access issues during live class sessions.</li>
+              <li>Developed ADA-compliant job aids and course materials across PowerPoint, Word, and PDF formats, leveraging Teams Premium and AI-enabled features to enhance faculty course delivery.</li>
+              <li>Collaborated with the instructional design team to support course operations and maintain a consistent online learning experience.</li>
+            </ul>
           </div>
-          <ul>
-            <li>Prepared instructional materials, graded assignments and exams, and provided one-on-one academic guidance during office hours.</li>
-            <li>Managed course records, grade tracking, and performance analytics using Blackboard LMS to support faculty reporting and monitor student progress.</li>
-            <li>Helped students strengthen analytical skills in financial data management, valuation, and quantitative methods.</li>
-          </ul>
+          <div class="role" id="exp-ta">
+            <div class="role-top"><h4>Graduate Teaching Assistant</h4><span class="when">Jan 2026 – May 2026</span></div>
+            <div class="where">Dallas, Texas | Hybrid</div>
+            <div class="reach"><b>240+</b>undergraduate and graduate students across four finance courses</div>
+            <div class="chips"><span class="chip">FIN 4345 Financial Information &amp; Analysis</span><span class="chip">FIN 6307 Mathematical Methods for Finance (in-person &amp; online)</span><span class="chip">FTEC 6V96 Financial Data Analytics</span></div>
+            <ul>
+              <li>Prepared instructional materials, graded assignments and exams, and provided one-on-one academic guidance during office hours.</li>
+              <li>Managed course records, grade tracking, and performance analytics using Blackboard LMS to support faculty reporting and monitor student progress.</li>
+              <li>Helped students strengthen analytical skills in financial data management, valuation, and quantitative methods.</li>
+            </ul>
+          </div>
+          <div class="role">
+            <div class="role-top"><h4>Graduate Teaching Assistant</h4><span class="when">Aug 2025 – Dec 2025</span></div>
+            <div class="where">Dallas, Texas | Hybrid</div>
+            <div class="reach"><b>200+</b>undergraduate and graduate students across three finance courses</div>
+            <div class="chips"><span class="chip">FIN 4345 Financial Information &amp; Analysis</span><span class="chip">FIN 6307 Mathematical Methods for Finance (in-person &amp; online)</span></div>
+            <ul>
+              <li>Prepared instructional materials, graded assignments and exams, and provided one-on-one academic guidance during office hours.</li>
+              <li>Managed course records, grade tracking, and performance analytics using Blackboard LMS to support faculty reporting and monitor student progress.</li>
+              <li>Helped students strengthen analytical skills in financial data management, valuation, and quantitative methods.</li>
+            </ul>
+          </div>
+          <div class="role" id="exp-ol">
+            <div class="role-top"><h4>Freshman Orientation Leader</h4><span class="when">Jun 2025 – Aug 2025</span></div>
+            <div class="where">Dallas, Texas | On-site</div>
+            <div class="reach"><b>600+</b>incoming students</div>
+            <ul>
+              <li>Selected to lead orientation for 600+ incoming students, serving as primary point of contact for onboarding communication, real-time logistics, and stakeholder coordination in a fast-paced, high-visibility environment.</li>
+              <li>Facilitated live virtual sessions via Microsoft Teams, managing group engagement and addressing questions on university resources for incoming international and domestic students.</li>
+              <li>Led small groups during orientation programs, facilitating discussions that promoted inclusion and engagement across diverse student populations.</li>
+              <li>Collaborated with professional staff to plan and execute large-scale orientation events, resolving on-the-spot challenges efficiently.</li>
+              <li>Provided one-on-one support to students and families, addressing questions about university life, policies, and academic expectations.</li>
+            </ul>
+          </div>
         </div>
-        <div class="role" id="exp-ol">
-          <h3>Freshman Orientation Leader</h3>
-          <div class="meta">Jun 2025 to Aug 2025 | Dallas, Texas | On-site</div>
-          <ul>
-            <li>Selected to lead orientation for 600+ incoming students, serving as primary point of contact for onboarding communication, real-time logistics, and stakeholder coordination in a fast-paced, high-visibility environment.</li>
-            <li>Facilitated live virtual sessions via Microsoft Teams, managing group engagement and addressing questions on university resources for incoming international and domestic students.</li>
-            <li>Led small groups during orientation programs, facilitating discussions that promoted inclusion and engagement across diverse student populations.</li>
-            <li>Collaborated with professional staff to plan and execute large-scale orientation events, resolving on-the-spot challenges efficiently.</li>
-            <li>Provided one-on-one support to students and families, addressing questions about university life, policies, and academic expectations.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+      </article>
 
-    <div class="org" id="exp-mm">
-      <div class="org-name">
-        <h3>Mentored Minds</h3>
-        <div class="sub">Internship | Pune, India | Remote</div>
-      </div>
-      <div class="role">
-        <h3>Business Analyst Intern</h3>
-        <div class="meta">Jul 2024 to Sep 2024</div>
-        <ul>
-          <li>Executed month-end financial reporting, budgeting, and spend analysis using automated Excel dashboards and AI-assisted workflows under tight close timelines.</li>
-          <li>Built KPI dashboards tracking performance trends and project-level profitability to improve leadership visibility into operations.</li>
-          <li>Delivered forecasting insights, variance analysis, and standardized summaries to support leadership planning and operational decision-making.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="org" id="exp-es">
-      <div class="org-name">
-        <h3>EasyShiksha</h3>
-        <div class="sub">Internship | Rajasthan, India | Remote</div>
-      </div>
-      <div class="role">
-        <h3>International Finance Intern</h3>
-        <div class="meta">May 2024 to Jul 2024</div>
-        <ul>
-          <li>Analyzed global markets and FX dynamics, assessing how currency movements and trade finance affect cross-border flows.</li>
-          <li>Evaluated FX and currency-risk exposure alongside an analyst team, researching hedging and risk management approaches and their treatment under IFRS reporting standards.</li>
-          <li>Synthesized research on global revenue and strategy into concise summaries, applying scenario modeling and financial-planning workflows.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="org" id="exp-ts">
-      <div class="org-name">
-        <h3>Tradeshala</h3>
-        <div class="sub">Internship | Bengaluru, India | Remote</div>
-      </div>
-      <div class="role">
-        <h3>Capital Market Analyst Intern</h3>
-        <div class="meta">Jan 2024 to May 2024</div>
-        <ul>
-          <li>Analyzed markets and benchmarked 15+ instruments across equities, fixed income, forex, crypto, and commodities, building structured investment theses to inform asset-allocation and tactical positioning recommendations.</li>
-          <li>Constructed and backtested multi-asset strategies within risk-return frameworks, running 10+ scenario simulations to stress-test allocations across risk profiles before review.</li>
-          <li>Partnered with research and portfolio leads to translate market intelligence into allocation decisions, balancing return against downside risk.</li>
-        </ul>
+      <div class="int-grid">
+        <article class="card org" id="exp-mm">
+          <div class="org-head"><div class="logo int" aria-hidden="true">MM</div><div><h3>Mentored Minds</h3><span>Pune, India | Remote</span></div></div>
+          <div class="roles int"><div class="role">
+            <div class="role-top"><h4>Business Analyst Intern</h4></div>
+            <div class="where">Jul 2024 – Sep 2024</div>
+            <ul>
+              <li>Executed month-end financial reporting, budgeting, and spend analysis using automated Excel dashboards and AI-assisted workflows under tight close timelines.</li>
+              <li>Built KPI dashboards tracking performance trends and project-level profitability to improve leadership visibility into operations.</li>
+              <li>Delivered forecasting insights, variance analysis, and standardized summaries to support leadership planning and operational decision-making.</li>
+            </ul>
+          </div></div>
+        </article>
+        <article class="card org" id="exp-es">
+          <div class="org-head"><div class="logo int" aria-hidden="true">ES</div><div><h3>EasyShiksha</h3><span>Rajasthan, India | Remote</span></div></div>
+          <div class="roles int"><div class="role">
+            <div class="role-top"><h4>International Finance Intern</h4></div>
+            <div class="where">May 2024 – Jul 2024</div>
+            <ul>
+              <li>Analyzed global markets and FX dynamics, assessing how currency movements and trade finance affect cross-border flows.</li>
+              <li>Evaluated FX and currency-risk exposure alongside an analyst team, researching hedging and risk management approaches and their treatment under IFRS reporting standards.</li>
+              <li>Synthesized research on global revenue and strategy into concise summaries, applying scenario modeling and financial-planning workflows.</li>
+            </ul>
+          </div></div>
+        </article>
+        <article class="card org" id="exp-ts">
+          <div class="org-head"><div class="logo int" aria-hidden="true">TS</div><div><h3>Tradeshala</h3><span>Bengaluru, India | Remote</span></div></div>
+          <div class="roles int"><div class="role">
+            <div class="role-top"><h4>Capital Market Analyst Intern</h4></div>
+            <div class="where">Jan 2024 – May 2024</div>
+            <ul>
+              <li>Analyzed markets and benchmarked 15+ instruments across equities, fixed income, forex, crypto, and commodities, building structured investment theses to inform asset-allocation and tactical positioning recommendations.</li>
+              <li>Constructed and backtested multi-asset strategies within risk-return frameworks, running 10+ scenario simulations to stress-test allocations across risk profiles before review.</li>
+              <li>Partnered with research and portfolio leads to translate market intelligence into allocation decisions, balancing return against downside risk.</li>
+            </ul>
+          </div></div>
+        </article>
       </div>
     </div>
   </div>
@@ -362,81 +543,82 @@ footer.site .fine{color:var(--muted);font-size:13px;margin-top:40px}
 
 <section id="projects">
   <div class="wrap">
-    <h2>Projects</h2>
-    <div class="proj-list">
+    <div class="eyebrow"><b>03</b><i></i>Projects</div>
+    <h2>Five projects, <span class="grad">every file on GitHub.</span></h2>
+    <p class="intro">Each one has its own case-study site, with the model, report or PDF available to open.</p>
+    <div class="pgrid">
 
-      <article class="proj lead">
-        <div>
+      <article class="card proj feature" style="--c:#E5372E">
+        <a class="cover" href="https://ajaaypatil0108.github.io/chipotle-fpa-model/" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/chipotle.jpg" alt="Chipotle FP&amp;A case study cover" loading="lazy" width="1200" height="630"></a>
+        <span class="star">Featured</span>
+        <div class="pbody">
+          <div class="pmeta"><span class="kind">FP&amp;A model</span><span>Jun 2026 – Present</span></div>
           <h3>Chipotle Mexican Grill (CMG): Integrated Three-Statement FP&amp;A Model &amp; Dashboard</h3>
-          <div class="meta">Jun 2026 to present | Self-directed portfolio project</div>
-          <p>A driver-based income statement, balance sheet and cash flow model built by hand from Chipotle’s FY2025 Form 10-K. It forecasts FY2026–2027, compares FY2025 actuals to a budget built from management’s guidance, and flexes the whole model with one Base / Bull / Bear switch.</p>
-          <p>The variance bridge shows the FY2025 revenue miss came almost entirely from lower sales per restaurant, mainly comparable sales of −1.7% vs. +4.0% budgeted, not from openings (334 vs. 330). Findings are packaged in a Power BI dashboard with 8 DAX measures and a written FP&amp;A memo.</p>
-          <div class="tags"><span class="chip">FP&amp;A</span><span class="chip">Three-statement modeling</span><span class="chip">Variance analysis</span><span class="chip">Scenario analysis</span><span class="chip">Power BI</span><span class="chip">DAX</span></div>
-          <div class="plinks"><a href="https://ajaaypatil0108.github.io/chipotle-fpa-model/" target="_blank" rel="noopener">View project site</a><a href="https://github.com/ajaaypatil0108/chipotle-fpa-model" target="_blank" rel="noopener">GitHub repo</a></div>
-        </div>
-        <div class="kpi">
-          <b>−$828M</b><span>FY2025 revenue vs. budget (−6.5%)</span>
-          <b>16.2%</b><span>Operating margin, 27 bps below budget</span>
-          <b>$14.38B</b><span>2027E revenue, Base case</span>
+          <p>A driver-based model built by hand from Chipotle’s FY2025 Form 10-K, with a budget-vs-actual variance bridge, a 2026–2027 forecast, a one-switch Base / Bull / Bear scenario engine, a Power BI dashboard with 8 DAX measures and a written FP&amp;A memo.</p>
+          <p>The FY2025 miss came almost entirely from lower sales per restaurant, mainly comparable sales of −1.7% vs. +4.0% budgeted, not from openings (334 vs. 330).</p>
+          <div class="kpis">
+            <div class="kpi"><b>−$828M</b><span>FY2025 revenue vs. budget (−6.5%)</span></div>
+            <div class="kpi"><b>16.2%</b><span>Operating margin, 27 bps below budget</span></div>
+            <div class="kpi"><b>$14.38B</b><span>2027E revenue, Base case</span></div>
+          </div>
+          <div class="plinks"><a class="go" href="https://ajaaypatil0108.github.io/chipotle-fpa-model/" target="_blank" rel="noopener">View case study</a><a href="https://github.com/ajaaypatil0108/chipotle-fpa-model" target="_blank" rel="noopener">GitHub repo</a></div>
         </div>
       </article>
 
-      <article class="proj">
-        <div>
+      <article class="card proj" style="--c:#2EC4A6">
+        <a class="cover" href="https://ajaaypatil0108.github.io/dfw-rental-underwriting/" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/dfw.jpg" alt="DFW rental underwriting case study cover" loading="lazy" width="1200" height="630"></a>
+        <div class="pbody">
+          <div class="pmeta"><span class="kind">Real-estate underwriting</span><span>Jul 2026 – Aug 2026</span></div>
           <h3>DFW Rental Underwriting Model: Single-Family Rental Screen &amp; 10-Year Pro Forma</h3>
-          <div class="meta">Jul 2026 to Aug 2026 | Self-directed portfolio project</div>
-          <p>An end-to-end underwriting model in Excel and Power Query that asks whether buying a single-family rental in Dallas–Fort Worth earns a return at today’s prices and a 7% mortgage. It ranks 166 DFW ZIP codes on gross rental yield (70%) and 3-year rent growth (30%), skips the top three as possible yield traps, and underwrites 76110 Fort Worth over a 10-year hold.</p>
-          <p>The verdict is a disciplined pass: negative leverage pulls the levered IRR below the unlevered return, DSCR stays under 1.0 for all ten years, and cash flow is negative every year.</p>
-          <div class="tags"><span class="chip">Real-estate underwriting</span><span class="chip">IRR &amp; DSCR</span><span class="chip">Sensitivity analysis</span><span class="chip">Power Query</span><span class="chip">Excel Data Tables</span></div>
-          <div class="plinks"><a href="https://ajaaypatil0108.github.io/dfw-rental-underwriting/" target="_blank" rel="noopener">View project site</a><a href="https://github.com/ajaaypatil0108/dfw-rental-underwriting" target="_blank" rel="noopener">GitHub repo</a></div>
-        </div>
-        <div class="kpi">
-          <b>1.1%</b><span>Levered IRR vs. 5.0% unlevered</span>
-          <b>0.71–0.93</b><span>DSCR, Year 1 to Year 10</span>
-          <b>166</b><span>DFW ZIP codes ranked</span>
+          <p>Ranks 166 DFW ZIP codes on rental yield and rent growth, then underwrites 76110 Fort Worth over a 10-year hold at a 7% mortgage. The verdict is a disciplined pass: negative leverage and a DSCR under 1.0 every year.</p>
+          <div class="kpis">
+            <div class="kpi"><b>1.1%</b><span>Levered IRR vs. 5.0% unlevered</span></div>
+            <div class="kpi"><b>0.71</b><span>DSCR, Year 1 (0.93 by Year 10)</span></div>
+            <div class="kpi"><b>166</b><span>DFW ZIPs ranked</span></div>
+          </div>
+          <div class="plinks"><a class="go" href="https://ajaaypatil0108.github.io/dfw-rental-underwriting/" target="_blank" rel="noopener">View case study</a><a href="https://github.com/ajaaypatil0108/dfw-rental-underwriting" target="_blank" rel="noopener">GitHub repo</a></div>
         </div>
       </article>
 
-      <article class="proj">
-        <div>
+      <article class="card proj" style="--c:#1DB954">
+        <a class="cover" href="https://ajaaypatil0108.github.io/spotify-premium-mini-marketing/" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/spotify.jpg" alt="Spotify Premium Mini case study cover" loading="lazy" width="1200" height="630"></a>
+        <div class="pbody">
+          <div class="pmeta"><span class="kind">Marketing strategy</span><span>Aug 2024 | Revised Oct 2026</span></div>
           <h3>Growing Spotify Premium Mini in India: Performance Marketing Strategy</h3>
-          <div class="meta">Aug 2024, revised Oct 2026 | Personal project</div>
-          <p>A performance marketing plan to turn free Spotify listeners in India into first-time Premium Mini buyers, then move them to monthly Premium, with target segments, KPIs, a 14-week phased timeline and an illustrative channel budget.</p>
-          <p>The main finding: the weekly pass costs less per day than the monthly plan, so the upgrade has to be sold on features rather than price.</p>
-          <div class="tags"><span class="chip">Performance marketing</span><span class="chip">Funnel planning</span><span class="chip">KPI design</span></div>
-          <div class="plinks"><a href="https://ajaaypatil0108.github.io/spotify-premium-mini-marketing/" target="_blank" rel="noopener">View project site</a><a href="https://github.com/ajaaypatil0108/spotify-premium-mini-marketing" target="_blank" rel="noopener">GitHub repo</a></div>
-        </div>
-        <div class="kpi">
-          <b>₹3.57</b><span>Weekly pass cost per day, vs. ₹3.97 for monthly</span>
-          <b>14 weeks</b><span>Four-phase campaign timeline</span>
+          <p>A plan to turn free listeners into first-time Premium Mini buyers, then move them to monthly Premium. The weekly pass costs less per day than the monthly plan, so the upgrade has to be sold on features, not price.</p>
+          <div class="kpis two">
+            <div class="kpi"><b>₹3.57</b><span>Weekly pass per day, vs. ₹3.97 monthly</span></div>
+            <div class="kpi"><b>14 weeks</b><span>Four-phase campaign timeline</span></div>
+          </div>
+          <div class="plinks"><a class="go" href="https://ajaaypatil0108.github.io/spotify-premium-mini-marketing/" target="_blank" rel="noopener">View case study</a><a href="https://github.com/ajaaypatil0108/spotify-premium-mini-marketing" target="_blank" rel="noopener">GitHub repo</a></div>
         </div>
       </article>
 
-      <article class="proj">
-        <div>
+      <article class="card proj" style="--c:#F08A3E">
+        <a class="cover" href="https://ajaaypatil0108.github.io/swiggy-daily-customers-strategy/" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/swiggy.jpg" alt="Swiggy product strategy case study cover" loading="lazy" width="1200" height="630"></a>
+        <div class="pbody">
+          <div class="pmeta"><span class="kind">Product strategy</span><span>Feb 2024 | Revised Oct 2026</span></div>
           <h3>Making Swiggy a Daily Habit: Product Strategy</h3>
-          <div class="meta">Feb 2024, revised Oct 2026 | Personal project</div>
-          <p>A product strategy to grow Swiggy’s daily customers by winning the weekday lunch, built on Swiggy’s FY24 figures. It ranks customer segments, reviews what Swiggy had already tried, and proposes three strategies: home-style meals in the main app, a Mumbai dabbawala lunch partnership, and a weekday lunch streak in Swiggy One.</p>
-          <div class="tags"><span class="chip">Product strategy</span><span class="chip">Customer segmentation</span><span class="chip">Competitive analysis</span></div>
-          <div class="plinks"><a href="https://ajaaypatil0108.github.io/swiggy-daily-customers-strategy/" target="_blank" rel="noopener">View project site</a><a href="https://github.com/ajaaypatil0108/swiggy-daily-customers-strategy" target="_blank" rel="noopener">GitHub repo</a></div>
-        </div>
-        <div class="kpi">
-          <b>~3.8</b><span>Food orders per user per month, FY24</span>
-          <b>3</b><span>Strategies to win weekday lunch</span>
+          <p>Grows daily customers by winning the weekday lunch, built on Swiggy’s FY24 figures: home-style meals in the main app, a Mumbai dabbawala lunch partnership, and a weekday lunch streak in Swiggy One.</p>
+          <div class="kpis two">
+            <div class="kpi"><b>~3.8</b><span>Food orders per user per month, FY24</span></div>
+            <div class="kpi"><b>3</b><span>Strategies to win weekday lunch</span></div>
+          </div>
+          <div class="plinks"><a class="go" href="https://ajaaypatil0108.github.io/swiggy-daily-customers-strategy/" target="_blank" rel="noopener">View case study</a><a href="https://github.com/ajaaypatil0108/swiggy-daily-customers-strategy" target="_blank" rel="noopener">GitHub repo</a></div>
         </div>
       </article>
 
-      <article class="proj">
-        <div>
+      <article class="card proj" style="--c:#7FB0F0">
+        <a class="cover" href="https://ajaaypatil0108.github.io/retail-investor-portfolio-survey/" target="_blank" rel="noopener" tabindex="-1"><img src="assets/img/survey.jpg" alt="Retail investor survey cover" loading="lazy" width="1200" height="630"></a>
+        <div class="pbody">
+          <div class="pmeta"><span class="kind">Investor survey</span><span>May 2024 | Revised Oct 2026</span></div>
           <h3>A Study of Portfolio Management of Investments</h3>
-          <div class="meta">May 2024, revised Oct 2026 | Personal project</div>
-          <p>A review of portfolio-management principles and a survey of 30 retail investors in Ulhasnagar, Thane district, Maharashtra, covering investment choices, risk preference, liquidity needs, expected returns and how often they review their portfolios.</p>
-          <div class="tags"><span class="chip">Portfolio management</span><span class="chip">Survey research</span><span class="chip">Investor behavior</span></div>
-          <div class="plinks"><a href="https://ajaaypatil0108.github.io/retail-investor-portfolio-survey/" target="_blank" rel="noopener">View project site</a><a href="https://github.com/ajaaypatil0108/retail-investor-portfolio-survey" target="_blank" rel="noopener">GitHub repo</a></div>
-        </div>
-        <div class="kpi">
-          <b>66.7%</b><span>Prefer mutual funds</span>
-          <b>86.7%</b><span>Want easy liquidity</span>
+          <p>A review of portfolio-management principles and a survey of 30 retail investors in Ulhasnagar, Thane district, covering investment choices, risk preference, liquidity and how often they rebalance.</p>
+          <div class="kpis two">
+            <div class="kpi"><b>66.7%</b><span>Choose mutual funds</span></div>
+            <div class="kpi"><b>86.7%</b><span>Want easy liquidity</span></div>
+          </div>
+          <div class="plinks"><a class="go" href="https://ajaaypatil0108.github.io/retail-investor-portfolio-survey/" target="_blank" rel="noopener">View case study</a><a href="https://github.com/ajaaypatil0108/retail-investor-portfolio-survey" target="_blank" rel="noopener">GitHub repo</a></div>
         </div>
       </article>
 
@@ -446,150 +628,202 @@ footer.site .fine{color:var(--muted);font-size:13px;margin-top:40px}
 
 <section id="education">
   <div class="wrap">
-    <h2>Education</h2>
-    <div class="edu">
-      <div class="card">
-        <h3>The University of Texas at Dallas</h3>
-        <div class="meta">Master of Science in Finance | Jan 2025 to Dec 2026 (expected) | GPA 3.75/4.00</div>
-        <p>Naveen Jindal School of Management. Recipient of the Program Excellence Scholarship, with a focus on financial risk management, investment strategies, and corporate finance.</p>
-        <div class="chips">
-          <span class="chip">Financial Accounting &amp; Management</span><span class="chip">Mathematical Methods for Finance</span><span class="chip">Negotiation &amp; Dispute Resolution</span><span class="chip">Analytics of Finance</span><span class="chip">Financial Modeling for Investment</span><span class="chip">Derivatives Markets</span><span class="chip">Introduction to Real Estate</span><span class="chip">Regulation of Business &amp; Financial Markets</span><span class="chip">Advanced AI Techniques for Financial Application</span><span class="chip">Energy Finance</span><span class="chip">Energy Law and Contract</span>
+    <div class="eyebrow"><b>04</b><i></i>Education</div>
+    <h2>Accounting roots, <span class="grad">finance depth.</span></h2>
+    <div class="egrid">
+      <article class="card edu">
+        <div class="ring" aria-label="GPA 3.75 out of 4.00">
+          <svg viewBox="0 0 104 104" aria-hidden="true"><defs><linearGradient id="rg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F5A524"/><stop offset="1" stop-color="#E8590C"/></linearGradient></defs><circle cx="52" cy="52" r="44" stroke="#2A2A2F" stroke-width="9" fill="none"/><circle cx="52" cy="52" r="44" stroke="url(#rg1)" stroke-width="9" fill="none" stroke-linecap="round" stroke-dasharray="259.2 276.5"/></svg>
+          <div class="v"><div><b>3.75</b><span>of 4.00</span></div></div>
         </div>
-      </div>
-      <div class="card">
-        <h3>University of Mumbai</h3>
-        <div class="meta">Bachelor of Commerce, Accounting and Finance | Jun 2020 to Mar 2023 | GPA 8.16/10.00</div>
-        <p>Saket College of Arts, Science and Commerce. Specialized in Financial Accounting and Auditing, with coursework in Computer Systems and Applications, Indirect Taxes, and Direct Taxes.</p>
-      </div>
+        <div>
+          <h3>The University of Texas at Dallas</h3>
+          <div class="deg">Master of Science in Finance</div>
+          <div class="meta">Naveen Jindal School of Management | Jan 2025 – Dec 2026 (expected)</div>
+          <div class="schol">Program Excellence Scholarship</div>
+          <p>Focus on financial risk management, investment strategies, and corporate finance.</p>
+        </div>
+        <div class="courses">
+          <h4>Relevant courses</h4>
+          <div class="chips" style="margin:0"><span class="chip">Financial Accounting &amp; Management</span><span class="chip">Mathematical Methods for Finance</span><span class="chip">Negotiation &amp; Dispute Resolution</span><span class="chip">Analytics of Finance</span><span class="chip">Financial Modeling for Investment</span><span class="chip">Derivatives Markets</span><span class="chip">Introduction to Real Estate</span><span class="chip">Regulation of Business &amp; Financial Markets</span><span class="chip">Advanced AI Techniques for Financial Application</span><span class="chip">Energy Finance</span><span class="chip">Energy Law and Contract</span></div>
+        </div>
+      </article>
+      <article class="card edu">
+        <div class="ring" aria-label="GPA 8.16 out of 10.00">
+          <svg viewBox="0 0 104 104" aria-hidden="true"><defs><linearGradient id="rg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3DBE8B"/><stop offset="1" stop-color="#8FE3C0"/></linearGradient></defs><circle cx="52" cy="52" r="44" stroke="#2A2A2F" stroke-width="9" fill="none"/><circle cx="52" cy="52" r="44" stroke="url(#rg2)" stroke-width="9" fill="none" stroke-linecap="round" stroke-dasharray="225.6 276.5"/></svg>
+          <div class="v"><div><b>8.16</b><span>of 10.00</span></div></div>
+        </div>
+        <div>
+          <h3>University of Mumbai</h3>
+          <div class="deg">Bachelor of Commerce, Accounting and Finance</div>
+          <div class="meta">Saket College of Arts, Science and Commerce | Jun 2020 – Mar 2023</div>
+          <p>Specialized in Financial Accounting and Auditing.</p>
+        </div>
+        <div class="courses">
+          <h4>Coursework</h4>
+          <div class="chips" style="margin:0"><span class="chip">Financial Accounting</span><span class="chip">Auditing</span><span class="chip">Computer Systems and Applications</span><span class="chip">Indirect Taxes</span><span class="chip">Direct Taxes</span></div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
 <section id="skills">
   <div class="wrap">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div><h3>Investment &amp; markets</h3><div class="chips"><span class="chip">Asset Allocation</span><span class="chip">Multi-Asset Strategy</span><span class="chip">Portfolio &amp; Strategy Analysis</span><span class="chip">Risk Management</span><span class="chip">Valuation</span><span class="chip">Scenario &amp; Sensitivity Analysis</span><span class="chip">Market Analysis</span><span class="chip">Client Segmentation</span></div></div>
-      <div><h3>Modeling &amp; analysis</h3><div class="chips"><span class="chip">Financial Modeling</span><span class="chip">Forecasting</span><span class="chip">Variance Analysis</span><span class="chip">Advanced Excel</span><span class="chip">PivotTables</span><span class="chip">XLOOKUP</span><span class="chip">Power Query</span><span class="chip">Power BI (DAX)</span><span class="chip">Python</span><span class="chip">SQL</span></div></div>
-      <div><h3>Client &amp; communication</h3><div class="chips"><span class="chip">Client Engagement</span><span class="chip">Relationship Building</span><span class="chip">Cross-Functional Collaboration</span><span class="chip">Written &amp; Verbal Communication</span></div></div>
-      <div><h3>Platforms</h3><div class="chips"><span class="chip">Bloomberg Terminal</span><span class="chip">Capital IQ</span><span class="chip">LSEG Workspace</span></div></div>
+    <div class="eyebrow"><b>05</b><i></i>Skills</div>
+    <h2>The toolkit <span class="grad">behind the models.</span></h2>
+    <div class="sgrid">
+      <div class="card skill" style="--c:#F5A524">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></div>
+        <h3>Investment &amp; markets</h3>
+        <div class="chips"><span class="chip">Asset Allocation</span><span class="chip">Multi-Asset Strategy</span><span class="chip">Portfolio &amp; Strategy Analysis</span><span class="chip">Risk Management</span><span class="chip">Valuation</span><span class="chip">Scenario &amp; Sensitivity Analysis</span><span class="chip">Market Analysis</span><span class="chip">Client Segmentation</span></div>
+      </div>
+      <div class="card skill" style="--c:#E8590C">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h3>Modeling &amp; analysis</h3>
+        <div class="chips"><span class="chip">Financial Modeling</span><span class="chip">Forecasting</span><span class="chip">Variance Analysis</span><span class="chip">Advanced Excel</span><span class="chip">PivotTables</span><span class="chip">XLOOKUP</span><span class="chip">Power Query</span><span class="chip">Power BI (DAX)</span><span class="chip">Python</span><span class="chip">SQL</span></div>
+      </div>
+      <div class="card skill" style="--c:#3DBE8B">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Client &amp; communication</h3>
+        <div class="chips"><span class="chip">Client Engagement</span><span class="chip">Relationship Building</span><span class="chip">Cross-Functional Collaboration</span><span class="chip">Written &amp; Verbal Communication</span></div>
+      </div>
+      <div class="card skill" style="--c:#8FE3C0">
+        <div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3>Platforms</h3>
+        <div class="chips"><span class="chip">Bloomberg Terminal</span><span class="chip">Capital IQ</span><span class="chip">LSEG Workspace</span></div>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="certifications">
   <div class="wrap">
-    <h2>Certifications</h2>
-    <div class="certs">
-      <div class="cert">Finance Essentials Certification<span>LSEG | Jan 2026</span></div>
-      <div class="cert">Introduction to Python<span>DataCamp | Sep 2025</span></div>
-      <div class="cert">Bloomberg Market Concepts<span>Bloomberg</span></div>
-      <div class="cert">Capital IQ Pro 101<span>S&amp;P Global</span></div>
-      <div class="cert">Financial Markets<span>Yale</span></div>
-      <div class="cert">Corporate Finance<span>Wharton</span></div>
-      <div class="cert">Behavioral Finance<span>Duke</span></div>
-      <div class="cert">Investment Risk Management<span>Google</span></div>
-      <div class="cert">Data Analytics Essentials<span>Cisco</span></div>
-      <div class="cert">Business Intelligence<span></span></div>
-      <div class="cert">Six Sigma<span></span></div>
+    <div class="eyebrow"><b>06</b><i></i>Certifications</div>
+    <h2>19 certifications across <span class="grad">finance and data.</span></h2>
+    <div class="cgrid">
+      <div class="card cert"><div class="iss">LSEG</div><div><b>Finance Essentials Certification</b><span>LSEG | Issued Jan 2026</span></div></div>
+      <div class="card cert"><div class="iss">DC</div><div><b>Introduction to Python</b><span>DataCamp | Issued Sep 2025</span></div></div>
+      <div class="card cert"><div class="iss">BMC</div><div><b>Bloomberg Market Concepts</b><span>Bloomberg</span></div></div>
+      <div class="card cert"><div class="iss">S&amp;P</div><div><b>Capital IQ Pro 101</b><span>S&amp;P Global</span></div></div>
+      <div class="card cert"><div class="iss">Yale</div><div><b>Financial Markets</b><span>Yale</span></div></div>
+      <div class="card cert"><div class="iss">WH</div><div><b>Corporate Finance</b><span>Wharton</span></div></div>
+      <div class="card cert"><div class="iss">Duke</div><div><b>Behavioral Finance</b><span>Duke</span></div></div>
+      <div class="card cert"><div class="iss">G</div><div><b>Investment Risk Management</b><span>Google</span></div></div>
+      <div class="card cert"><div class="iss">CS</div><div><b>Data Analytics Essentials</b><span>Cisco</span></div></div>
+      <div class="card cert"><div class="iss">BI</div><div><b>Business Intelligence</b><span>Certification</span></div></div>
+      <div class="card cert"><div class="iss">6σ</div><div><b>Six Sigma</b><span>Certification</span></div></div>
     </div>
-    <p class="more">19 licenses and certifications in total. <a href="https://www.linkedin.com/in/ajaaypatil/details/certifications/" target="_blank" rel="noopener">See the full list on LinkedIn</a></p>
+    <a class="morelink" href="https://www.linkedin.com/in/ajaaypatil/details/certifications/" target="_blank" rel="noopener">See all 19 on LinkedIn</a>
   </div>
 </section>
 
 <section id="volunteering">
   <div class="wrap">
-    <h2>Volunteering</h2>
-    <div class="vol">
-      <div class="card">
-        <h3>Indian Students Association at UT Dallas</h3>
-        <div class="meta">Student Volunteer | Jan 2025 to present | Social services</div>
-        <p>Support the Indian student community through event logistics and social service initiatives, with a focus on distribution, material setup and resource coordination. Contribute to donation drives, outreach efforts and cultural programs.</p>
-      </div>
-      <div class="card">
-        <h3>UTD Infinity Lions Club</h3>
-        <div class="meta">Member | Feb 2025 to present | Social services</div>
-        <p>Member of a club affiliated with Lions Clubs International. Take part in local community service projects across North Texas and club activities focused on social impact, leadership and networking.</p>
-      </div>
+    <div class="eyebrow"><b>07</b><i></i>Volunteering</div>
+    <h2>Five volunteer roles, <span class="grad">on campus and beyond.</span></h2>
+    <div class="vgrid">
+      <article class="card vol">
+        <div class="top"><h3>Indian Students Association at UT Dallas</h3><span class="badge live">Active</span></div>
+        <div class="meta">Student Volunteer | Jan 2025 – Present | Social services</div>
+        <p>Support the Indian student community through event logistics and social service initiatives: distribution, material setup and resource coordination, plus donation drives, outreach efforts and cultural programs.</p>
+      </article>
+      <article class="card vol">
+        <div class="top"><h3>UTD Infinity Lions Club</h3><span class="badge live">Active</span></div>
+        <div class="meta">Member | Feb 2025 – Present | Social services</div>
+        <p>Member of a club affiliated with Lions Clubs International, taking part in community service projects across North Texas and club activities focused on social impact, leadership and networking.</p>
+      </article>
     </div>
-    <p class="more">5 volunteer roles in total. <a href="https://www.linkedin.com/in/ajaaypatil/details/volunteering-experiences/" target="_blank" rel="noopener">See all on LinkedIn</a></p>
+    <a class="morelink" href="https://www.linkedin.com/in/ajaaypatil/details/volunteering-experiences/" target="_blank" rel="noopener">See all 5 on LinkedIn</a>
   </div>
 </section>
 
 <section id="recommendations">
   <div class="wrap">
-    <h2>Recommendations</h2>
-    <div class="recs">
-      <blockquote>
+    <div class="eyebrow"><b>08</b><i></i>Recommendations</div>
+    <h2>What people I’ve worked with <span class="grad">say.</span></h2>
+    <div class="rgrid">
+      <figure class="card rec" style="margin:0">
         <p>“I had the pleasure of supervising Ajay as a student worker for JSOM Online, and he consistently proved to be someone our team could depend on. … Ajay is reliable, adaptable, and a strong communicator. I truly enjoyed working with him and would confidently recommend him to any team looking for someone who is dependable, motivated, and ready to contribute.”</p>
-        <footer><b>Marie Cloud</b><span>Instructional Designer | Educator. Managed Ajay directly, September 2026.</span></footer>
-      </blockquote>
-      <blockquote>
-        <p>“I had the pleasure of working with Ajay during the Summer 2026 semester at UTD, where he assisted with a course I taught. Ajay is extremely knowledgeable, reliable, and professional. … I highly recommend him for any future academic or professional endeavors.”</p>
-        <footer><b>Jim Harbur</b><span>C-IV Asset Management LLC. Worked with Ajay at UTD, September 2026.</span></footer>
-      </blockquote>
+        <figcaption class="who"><div class="av" aria-hidden="true">MC</div><div><b>Marie Cloud</b><span>Instructional Designer | Educator. Managed Ajay directly, Sep 2026</span></div></figcaption>
+      </figure>
+      <figure class="card rec" style="margin:0">
+        <p>“I had the pleasure of working with Ajay during the Summer 2026 semester at UTD, where he assisted with a course I taught. Ajay is extremely knowledgeable, reliable, and professional. By effectively facilitating instruction delivery, he significantly enhanced both the overall course experience and student outcomes. I highly recommend him for any future academic or professional endeavors.”</p>
+        <figcaption class="who"><div class="av" aria-hidden="true">JH</div><div><b>Jim Harbur</b><span>C-IV Asset Management LLC. Worked with Ajay at UTD, Sep 2026</span></div></figcaption>
+      </figure>
     </div>
-    <p class="more">5 recommendations received. <a href="https://www.linkedin.com/in/ajaaypatil/details/recommendations/" target="_blank" rel="noopener">Read them all on LinkedIn</a></p>
+    <a class="morelink" href="https://www.linkedin.com/in/ajaaypatil/details/recommendations/" target="_blank" rel="noopener">Read all 5 recommendations on LinkedIn</a>
   </div>
 </section>
 
 <section id="activity">
   <div class="wrap">
-    <h2>From my LinkedIn</h2>
-    <ul class="posts">
-      <li><time datetime="2026-02-03">Feb 3, 2026</time><span>Where Growth Meets Impact: My Continuing Journey at UTD</span></li>
-      <li><time datetime="2025-08-28">Aug 28, 2025</time><span>From Welcoming to Teaching: A Full Circle Moment at UTD</span></li>
-      <li><time datetime="2025-07-19">Jul 19, 2025</time><span>From Quiet Beginnings to Leading Orientation: A Journey of Growth</span></li>
-      <li><time datetime="2025-05-18">May 18, 2025</time><span>From Nervous to Confident: My Journey This Semester</span></li>
-      <li><time datetime="2025-04-26">Apr 26, 2025</time><span>From India to the United States: A Journey of Growth and Dreams</span></li>
-    </ul>
-    <p class="more"><a href="https://www.linkedin.com/in/ajaaypatil/recent-activity/all/" target="_blank" rel="noopener">Read my posts on LinkedIn</a></p>
+    <div class="eyebrow"><b>09</b><i></i>From LinkedIn</div>
+    <h2>Notes from <span class="grad">the journey.</span></h2>
+    <div class="posts">
+      <div class="card post"><b>Where Growth Meets Impact: My Continuing Journey at UTD</b><time datetime="2026-02-03">Feb 3, 2026</time></div>
+      <div class="card post"><b>From Welcoming to Teaching: A Full Circle Moment at UTD</b><time datetime="2025-08-28">Aug 28, 2025</time></div>
+      <div class="card post"><b>From Quiet Beginnings to Leading Orientation: A Journey of Growth</b><time datetime="2025-07-19">Jul 19, 2025</time></div>
+      <div class="card post"><b>From Nervous to Confident: My Journey This Semester</b><time datetime="2025-05-18">May 18, 2025</time></div>
+      <div class="card post"><b>From India to the United States: A Journey of Growth and Dreams</b><time datetime="2025-04-26">Apr 26, 2025</time></div>
+    </div>
+    <a class="morelink" href="https://www.linkedin.com/in/ajaaypatil/recent-activity/all/" target="_blank" rel="noopener">Read my posts on LinkedIn</a>
   </div>
 </section>
-</main>
 
-<footer class="site" id="contact">
-  <div class="wrap">
-    <h2>Let’s connect</h2>
-    <p class="sub">Based in Dallas, Texas. The best way to reach me is by email or LinkedIn.</p>
-    <div class="links" style="margin-top:20px">
+<div class="wrap">
+  <div class="contact" id="contact">
+    <div class="eyebrow"><b>10</b><i></i>Contact</div>
+    <h2>Let’s <span class="grad">connect.</span></h2>
+    <p>Based in Dallas, Texas and open to full-time roles in financial analysis, FP&amp;A, risk and consulting. Email or LinkedIn is the best way to reach me.</p>
+    <div class="cta">
       <a class="btn primary" href="mailto:ajaaypatil0108@gmail.com">ajaaypatil0108@gmail.com</a>
       <a class="btn" href="https://www.linkedin.com/in/ajaaypatil/" target="_blank" rel="noopener">linkedin.com/in/ajaaypatil</a>
       <a class="btn" href="https://github.com/ajaaypatil0108" target="_blank" rel="noopener">github.com/ajaaypatil0108</a>
     </div>
-    <p class="fine">© 2026 Ajay Patil. Project figures come from public filings and data; independent educational work, not investment advice.</p>
   </div>
-</footer>
+  <footer><span>© 2026 Ajay Patil</span><span>Projects are independent educational work, not investment advice.</span></footer>
+</div>
+</main>
 
 <script>
 (function(){
-  // Months from Jan 2024 (0) to Dec 2026 (36)
-  const START = 2024, SPAN = 36;
+  const START = 2024, SPAN = 36;               // Jan 2024 .. Dec 2026, in months
   const m = (y, mo) => (y - START) * 12 + (mo - 1);
+  const d = new Date();
+  const NOW = Math.min(SPAN, Math.max(m(2026,5)+1, m(d.getFullYear(), d.getMonth()+1) + d.getDate()/31));
   const rows = [
-    {label:"Tradeshala",                 href:"#exp-ts",   cls:"int", s:m(2024,1),  e:m(2024,5)+1},
-    {label:"EasyShiksha",                href:"#exp-es",   cls:"int", s:m(2024,5),  e:m(2024,7)+1},
-    {label:"Mentored Minds",             href:"#exp-mm",   cls:"int", s:m(2024,7),  e:m(2024,9)+1},
-    {label:"MS Finance, UT Dallas",      href:"#education",cls:"edu", s:m(2025,1),  e:m(2026,12)+1},
-    {label:"Orientation Leader",         href:"#exp-ol",   cls:"utd", s:m(2025,6),  e:m(2025,8)+1},
-    {label:"Graduate Teaching Assistant",href:"#exp-ta",   cls:"utd", s:m(2025,8),  e:m(2026,5)+1},
-    {label:"JSOM Online Team",           href:"#exp-jsom", cls:"utd", s:m(2026,5),  e:m(2026,10)+1, live:true}
+    {t:"Tradeshala",            s2:"Capital Market Analyst Intern", href:"#exp-ts",   c:"int", a:m(2024,1),  b:m(2024,5)+1},
+    {t:"EasyShiksha",           s2:"International Finance Intern",  href:"#exp-es",   c:"int", a:m(2024,5),  b:m(2024,7)+1},
+    {t:"Mentored Minds",        s2:"Business Analyst Intern",       href:"#exp-mm",   c:"int", a:m(2024,7),  b:m(2024,9)+1},
+    {t:"MS Finance",            s2:"UT Dallas",                     href:"#education",c:"prog", a:m(2025,1),  b:m(2026,12)+1},
+    {t:"Orientation Leader",    s2:"UT Dallas",                     href:"#exp-ol",   c:"utd", a:m(2025,6),  b:m(2025,8)+1},
+    {t:"Teaching Assistant",    s2:"UT Dallas, two semesters",      href:"#exp-ta",   c:"utd", a:m(2025,8),  b:m(2026,5)+1},
+    {t:"JSOM Online Team",      s2:"UT Dallas, current",            href:"#exp-jsom", c:"utd", a:m(2026,5),  b:NOW}
   ];
   const host = document.getElementById("gantt");
   const grid = document.createElement("div"); grid.className = "g-grid";
   [12,24].forEach(t => { const s=document.createElement("span"); s.style.left=(t/SPAN*100)+"%"; grid.appendChild(s); });
+  const today = document.createElement("span"); today.className="today"; today.style.left=(NOW/SPAN*100)+"%";
+  today.innerHTML = "<em>Today</em>"; grid.appendChild(today);
   host.appendChild(grid);
   rows.forEach((r,i) => {
     const row = document.createElement("div"); row.className = "g-row";
-    const a = document.createElement("a"); a.className="g-label"; a.href=r.href; a.textContent=r.label;
+    const a = document.createElement("a"); a.className="g-label"; a.href=r.href;
+    a.innerHTML = "<b></b><span></span>"; a.querySelector("b").textContent=r.t; a.querySelector("span").textContent=r.s2;
     const t = document.createElement("div"); t.className="g-track";
-    const b = document.createElement("div"); b.className = "g-bar " + r.cls + (r.live ? " live" : "");
-    b.style.left = (r.s/SPAN*100) + "%"; b.style.width = ((r.e-r.s)/SPAN*100) + "%"; b.style.setProperty("--i", i);
-    b.title = r.label;
-    t.appendChild(b); row.appendChild(a); row.appendChild(t); host.appendChild(row);
+    const bar = document.createElement("div"); bar.className="g-bar "+r.c;
+    bar.style.left=(r.a/SPAN*100)+"%"; bar.style.width=((r.b-r.a)/SPAN*100)+"%"; bar.style.setProperty("--i", i);
+    bar.title = r.t + " (" + r.s2 + ")";
+    t.appendChild(bar); row.appendChild(a); row.appendChild(t); host.appendChild(row);
   });
   const ticks = document.getElementById("ticks");
   [2024,2025,2026].forEach((y,i) => { const s=document.createElement("span"); s.style.left=(i*12/SPAN*100)+"%"; s.textContent=y; ticks.appendChild(s); });
+  // grow the bars once, when the chart scrolls into view
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) { host.classList.add("go"); io.disconnect(); } }); }, {threshold:.3});
+    io.observe(host);
+  } else { host.classList.add("go"); }
 })();
 </script>
 </body>
