@@ -247,6 +247,9 @@ h2{font-weight:800;font-size:clamp(32px,4.6vw,48px);line-height:1.08;letter-spac
 /* certifications */
 .cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
 .cert{display:flex;gap:14px;align-items:center;padding:16px}
+.cgroup{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:700;margin:30px 0 14px}
+.cgroup:first-of-type{margin-top:6px}
+.cgroup span{font-size:12px;font-weight:700;color:var(--muted);background:var(--surf2);border:1px solid var(--line);border-radius:999px;padding:1px 9px}
 .cert .iss{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:12px;font-weight:800;background:var(--surf2);border:1px solid var(--line);flex:none;letter-spacing:-0.02em;color:var(--amber)}
 .cert b{display:block;font-size:14.5px;font-weight:600;line-height:1.3}
 .cert span{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
@@ -745,20 +748,35 @@ footer{padding:40px 0 48px;color:var(--muted);font-size:13px;display:flex;flex-w
   <div class="wrap">
     <div class="eyebrow"><b>06</b><i></i>Certifications</div>
     <h2>19 certifications across <span class="grad">finance and data.</span></h2>
+    <h3 class="cgroup">Finance &amp; markets<span>8</span></h3>
     <div class="cgrid">
-      <div class="card cert"><div class="iss">LSEG</div><div><b>Finance Essentials Certification</b><span>LSEG | Issued Jan 2026</span></div></div>
-      <div class="card cert"><div class="iss">DC</div><div><b>Introduction to Python</b><span>DataCamp | Issued Sep 2025</span></div></div>
-      <div class="card cert"><div class="iss">BMC</div><div><b>Bloomberg Market Concepts</b><span>Bloomberg</span></div></div>
-      <div class="card cert"><div class="iss">S&amp;P</div><div><b>Capital IQ Pro 101</b><span>S&amp;P Global</span></div></div>
-      <div class="card cert"><div class="iss">Yale</div><div><b>Financial Markets</b><span>Yale</span></div></div>
-      <div class="card cert"><div class="iss">WH</div><div><b>Corporate Finance</b><span>Wharton</span></div></div>
-      <div class="card cert"><div class="iss">Duke</div><div><b>Behavioral Finance</b><span>Duke</span></div></div>
-      <div class="card cert"><div class="iss">G</div><div><b>Investment Risk Management</b><span>Google</span></div></div>
-      <div class="card cert"><div class="iss">CS</div><div><b>Data Analytics Essentials</b><span>Cisco</span></div></div>
-      <div class="card cert"><div class="iss">BI</div><div><b>Business Intelligence</b><span>Certification</span></div></div>
-      <div class="card cert"><div class="iss">6σ</div><div><b>Six Sigma</b><span>Certification</span></div></div>
+        <div class="card cert"><div class="iss">LSEG</div><div><b>Finance Essentials Certification</b><span>LSEG | Issued Jan 2026</span></div></div>
+        <div class="card cert"><div class="iss">S&amp;P</div><div><b>Capital IQ Pro 101 Certification</b><span>S&amp;P Global Market Intelligence | Issued Jul 2025</span></div></div>
+        <div class="card cert"><div class="iss">BMC</div><div><b>Bloomberg Market Concepts</b><span>Bloomberg | Issued May 2025</span></div></div>
+        <div class="card cert"><div class="iss">Yale</div><div><b>Financial Markets</b><span>Yale University | Issued Nov 2024</span></div></div>
+        <div class="card cert"><div class="iss">Duke</div><div><b>Behavioral Finance</b><span>Duke University, The Fuqua School of Business | Issued Aug 2024</span></div></div>
+        <div class="card cert"><div class="iss">WH</div><div><b>Introduction to Corporate Finance</b><span>The Wharton School | Issued Jul 2024</span></div></div>
+        <div class="card cert"><div class="iss">SL</div><div><b>Introduction to Basics of Finance</b><span>Simplilearn | Issued Jun 2024</span></div></div>
+        <div class="card cert"><div class="iss">G</div><div><b>Investment Risk Management</b><span>Google</span></div></div>
     </div>
-    <a class="morelink" href="https://www.linkedin.com/in/ajaaypatil/details/certifications/" target="_blank" rel="noopener">See all 19 on LinkedIn</a>
+    <h3 class="cgroup">Job simulations (Forage)<span>3</span></h3>
+    <div class="cgrid">
+        <div class="card cert"><div class="iss">EY</div><div><b>Financial Accounting Advisory Services (FAAS) Job Simulation</b><span>EY | Issued Mar 2024</span></div></div>
+        <div class="card cert"><div class="iss">JPM</div><div><b>Asset Management Job Simulation</b><span>JPMorgan Chase | Issued Mar 2024</span></div></div>
+        <div class="card cert"><div class="iss">BofA</div><div><b>Investment Banking Job Simulation</b><span>Bank of America | Issued Mar 2024</span></div></div>
+    </div>
+    <h3 class="cgroup">Data, analytics &amp; business<span>8</span></h3>
+    <div class="cgrid">
+        <div class="card cert"><div class="iss">DC</div><div><b>Introduction to Python</b><span>DataCamp | Issued Sep 2025</span></div></div>
+        <div class="card cert"><div class="iss">SL</div><div><b>Introduction to Six Sigma</b><span>Simplilearn | Issued Jun 2024</span></div></div>
+        <div class="card cert"><div class="iss">SL</div><div><b>Business Intelligence Fundamentals</b><span>Simplilearn | Issued Jun 2024</span></div></div>
+        <div class="card cert"><div class="iss">SL</div><div><b>Business Analysis</b><span>Simplilearn | Issued Jun 2024</span></div></div>
+        <div class="card cert"><div class="iss">G</div><div><b>Business Analysis &amp; Process Management</b><span>Google</span></div></div>
+        <div class="card cert"><div class="iss">CS</div><div><b>Introduction to Cybersecurity</b><span>Cisco | Issued Feb 2024</span></div></div>
+        <div class="card cert"><div class="iss">CS</div><div><b>Data Analytics Essentials</b><span>Cisco | Issued Jul 2023</span></div></div>
+        <div class="card cert"><div class="iss">CR</div><div><b>Google Digital Marketing &amp; E-commerce Professional</b><span>Coursera | Issued Jun 2023</span></div></div>
+    </div>
+    <a class="morelink" href="https://www.linkedin.com/in/ajaaypatil/details/certifications/" target="_blank" rel="noopener">View credentials on LinkedIn</a>
   </div>
 </section>
 
