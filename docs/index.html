@@ -45,15 +45,38 @@ a{color:inherit}
 .muted{color:var(--muted)}
 
 /* motion */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0ms)}
-.reveal.in{opacity:1;transform:none}
+.no-tr,.no-tr *,.no-tr *::before,.no-tr *::after{transition:none!important}
+.reveal:not(#_){opacity:0;transform:translateY(48px) scale(.97);filter:blur(6px);transition:opacity .9s cubic-bezier(.16,.8,.24,1),transform .9s cubic-bezier(.16,.8,.24,1),filter .9s cubic-bezier(.16,.8,.24,1);transition-delay:var(--d,0ms)}
+.reveal.from-left:not(#_){transform:translateX(-56px)}
+.reveal.in:not(#_){opacity:1;transform:none;filter:none}
 nav ul a{position:relative;transition:color .2s}
 nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;border-radius:2px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
 nav ul a.active{color:var(--text)}
 nav ul a.active::after{transform:scaleX(1)}
-.role li.xshow{animation:xin .4s cubic-bezier(.2,.7,.2,1) both}
-@keyframes xin{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.role li.xshow{animation:none}nav ul a::after{transition:none}}
+.progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:30;background:var(--grad);transform-origin:left;transform:scaleX(0);pointer-events:none}
+.role li.xshow{animation:xin .45s cubic-bezier(.2,.7,.2,1) both}
+@keyframes xin{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+/* experience: the timeline draws itself, then each role slides in */
+.roles.prep::before{transform:scaleY(0);transform-origin:top;transition:transform 1.4s cubic-bezier(.3,.7,.2,1)}
+.roles.prep.drawn::before{transform:scaleY(1)}
+.roles.prep .role{opacity:0;transform:translateX(-36px);transition:opacity .7s ease,transform .7s cubic-bezier(.16,.8,.24,1);transition-delay:var(--d,0ms)}
+.roles.prep .role::before{transform:scale(0);transition:transform .5s cubic-bezier(.34,1.56,.64,1);transition-delay:var(--d,0ms)}
+.roles.prep.drawn .role{opacity:1;transform:none}
+.roles.prep.drawn .role::before{transform:scale(1)}
+.logo{transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+.org:hover .logo{transform:rotate(-6deg) scale(1.08)}
+.int-grid .org{transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .25s,box-shadow .35s}
+.int-grid .org:hover{transform:translateY(-6px);border-color:rgba(240,138,36,.45);box-shadow:0 26px 60px -30px rgba(240,138,36,.45)}
+/* projects: lift on hover, covers settle in, numbers count up */
+.proj{transition:border-color .25s,transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.proj:hover{transform:translateY(-8px);box-shadow:0 30px 70px -30px color-mix(in srgb,var(--c) 55%,transparent)}
+.proj.prep .cover img{transform:scale(1.14);filter:saturate(.4) brightness(.7);transition:transform 1.6s cubic-bezier(.16,.8,.24,1),filter 1.2s ease}
+.proj.prep.drawn .cover img{transform:scale(1);filter:none}
+.proj .kpi{transition:transform .3s cubic-bezier(.2,.7,.2,1),border-color .25s}
+.proj .kpi:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--c) 50%,var(--line))}
+@media (prefers-reduced-motion:reduce){.reveal:not(#_){opacity:1;transform:none;filter:none;transition:none}.role li.xshow{animation:none}nav ul a::after{transition:none}.progress{display:none}
+  .roles.prep::before,.roles.prep .role,.roles.prep .role::before,.proj.prep .cover img{transform:none;opacity:1;filter:none;transition:none}
+  .proj,.proj:hover,.int-grid .org:hover,.org:hover .logo,.proj .kpi:hover{transform:none}}
 /* nav */
 nav{position:sticky;top:0;z-index:20;background:rgba(14,14,16,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:60px}
@@ -922,35 +945,74 @@ footer{padding:40px 0 48px;color:var(--muted);font-size:13px;display:flex;flex-w
 })();
 </script>
 <script>
-// Motion: hero entrance on load, scroll-in reveals, and the active section in the menu
+// Motion: hero entrance, section reveals, experience timeline, project covers, count-up numbers, menu highlight, scroll progress
 (function(){
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!reduce && 'IntersectionObserver' in window) {
+  var hasIO = 'IntersectionObserver' in window;
+  function once(nodes, cb, opts){
+    if (!hasIO) { nodes.forEach(cb); return; }
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { cb(e.target); io.unobserve(e.target); } }); }, opts || {threshold:.15, rootMargin:'0px 0px -60px 0px'});
+    nodes.forEach(function(n){ io.observe(n); });
+  }
+  function finish(el){ el.classList.remove('reveal','in','from-left'); el.style.removeProperty('--d'); }
+  function cleanup(el){ el.addEventListener('transitionend', function f(e){ if (e.propertyName === 'opacity' && e.target === el && el.classList.contains('in')) { finish(el); el.removeEventListener('transitionend', f); } }); }
+  function show(el){ el.classList.add('in'); var d = parseInt(el.style.getPropertyValue('--d')) || 0; setTimeout(function(){ if (el.classList.contains('in')) finish(el); }, d + 1400); }
+
+  // count-up for figures like −$828M, 16.2%, $14.38B, 0.71, ₹3.57, 240+
+  function countUp(el){
+    var txt = el.textContent, m = txt.match(/^([^0-9]*)([0-9][0-9,]*\.?[0-9]*)(.*)$/);
+    if (!m) return;
+    var pre = m[1], num = parseFloat(m[2].replace(/,/g,'')), post = m[3], dec = (m[2].split('.')[1] || '').length, t0 = null, dur = 1300;
+    function step(t){ if (!t0) t0 = t; var k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+      el.textContent = pre + (num * e).toFixed(dec) + post; if (k < 1) requestAnimationFrame(step); else el.textContent = txt; }
+    requestAnimationFrame(step);
+  }
+
+  if (!reduce) {
+    // set up the hidden start states without animating to them
+    var root = document.documentElement; root.classList.add('no-tr');
+    // hero entrance
     var heroEls = document.querySelectorAll('.hero .pill, .hero h1, .hero .lede, .hero .cta, .hero .byline, .idcard, .stats .stat');
+    heroEls.forEach(function(el, i){ el.classList.add('reveal'); el.style.setProperty('--d', (i * 90) + 'ms'); cleanup(el); });
+    var ready = function(){ root.classList.remove('no-tr'); requestAnimationFrame(function(){ heroEls.forEach(show); }); };
+    setTimeout(function(){ document.querySelectorAll('.stats .stat b').forEach(countUp); }, 450);
+
+    // section reveals: headings sweep in from the left, cards rise
     var sel = 'section .eyebrow, section h2, section .intro, section .card, section .morelink, .contact';
     var els = Array.prototype.slice.call(document.querySelectorAll(sel));
-    var done = function(el){ el.addEventListener('transitionend', function f(e){ if (e.propertyName === 'opacity') { el.classList.remove('reveal','in'); el.style.removeProperty('--d'); el.removeEventListener('transitionend', f); } }); };
-    heroEls.forEach(function(el, i){ el.classList.add('reveal'); el.style.setProperty('--d', (i * 70) + 'ms'); done(el); });
-    requestAnimationFrame(function(){ requestAnimationFrame(function(){ heroEls.forEach(function(el){ el.classList.add('in'); }); }); });
     els.forEach(function(el){
       var sibs = Array.prototype.filter.call(el.parentNode.children, function(c){ return c.matches(sel); });
-      var i = sibs.indexOf(el);
-      el.classList.add('reveal'); el.style.setProperty('--d', Math.min(i * 80, 400) + 'ms'); done(el);
+      el.classList.add('reveal');
+      if (el.matches('section .eyebrow, section h2, section .intro')) el.classList.add('from-left');
+      el.style.setProperty('--d', Math.min(sibs.indexOf(el) * 110, 550) + 'ms'); cleanup(el);
     });
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, {threshold: 0.12, rootMargin: '0px 0px -40px 0px'});
-    els.forEach(function(el){ io.observe(el); });
+    var observeAll = function(){ once(els, show); };
+
+    // experience: draw each timeline, then slide roles in one by one
+    var roleLists = Array.prototype.slice.call(document.querySelectorAll('#experience .roles'));
+    roleLists.forEach(function(r){ r.classList.add('prep'); r.querySelectorAll('.role').forEach(function(role, i){ role.style.setProperty('--d', (250 + i * 170) + 'ms'); }); });
+    var observeRoles = function(){ once(roleLists, function(r){ setTimeout(function(){ r.classList.add('drawn'); }, 150); }); };
+
+    // projects: covers settle in, numbers count up
+    var projs = Array.prototype.slice.call(document.querySelectorAll('#projects .proj'));
+    projs.forEach(function(p){ p.classList.add('prep'); });
+    var observeProjs = function(){ once(projs, function(p){ setTimeout(function(){ p.classList.add('drawn'); p.querySelectorAll('.kpi b').forEach(countUp); }, 200); }); };
+    void root.offsetHeight;  // commit the hidden states
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){ ready(); observeAll(); observeRoles(); observeProjs(); }); });
+
+    // scroll progress bar
+    var bar = document.createElement('div'); bar.className = 'progress'; bar.setAttribute('aria-hidden','true'); document.body.appendChild(bar);
+    var ticking = false;
+    function upd(){ var h = document.documentElement.scrollHeight - innerHeight; bar.style.transform = 'scaleX(' + (h > 0 ? scrollY / h : 0) + ')'; ticking = false; }
+    addEventListener('scroll', function(){ if (!ticking) { ticking = true; requestAnimationFrame(upd); } }, {passive:true}); upd();
   }
+
   // highlight the menu link for the section in view
   var links = {};
   document.querySelectorAll('nav ul a[href^="#"]').forEach(function(a){ links[a.getAttribute('href').slice(1)] = a; });
-  if ('IntersectionObserver' in window) {
+  if (hasIO) {
     var spy = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        var a = links[e.target.id]; if (!a) return;
-        if (e.isIntersecting) { Object.keys(links).forEach(function(k){ links[k].classList.remove('active'); }); a.classList.add('active'); }
-      });
+      entries.forEach(function(e){ var a = links[e.target.id]; if (a && e.isIntersecting) { Object.keys(links).forEach(function(k){ links[k].classList.remove('active'); }); a.classList.add('active'); } });
     }, {rootMargin: '-45% 0px -50% 0px'});
     Object.keys(links).forEach(function(id){ var t = document.getElementById(id); if (t) spy.observe(t); });
   }
