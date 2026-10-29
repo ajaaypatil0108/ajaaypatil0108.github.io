@@ -966,8 +966,8 @@ footer{padding:40px 0 48px;color:var(--muted);font-size:13px;display:flex;flex-w
   function countUp(el){
     var txt = el.textContent, m = txt.match(/^([^0-9]*)([0-9][0-9,]*\.?[0-9]*)(.*)$/);
     if (!m) return;
-    var pre = m[1], num = parseFloat(m[2].replace(/,/g,'')), post = m[3], dec = (m[2].split('.')[1] || '').length, t0 = null, dur = 1300;
-    function step(t){ if (!t0) t0 = t; var k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+    var pre = m[1], num = parseFloat(m[2].replace(/,/g,'')), post = m[3], dec = (m[2].split('.')[1] || '').length, t0 = null, dur = 3200;
+    function step(t){ if (!t0) t0 = t; var k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 2);
       el.textContent = pre + (num * e).toFixed(dec) + post; if (k < 1) requestAnimationFrame(step); else el.textContent = txt; }
     requestAnimationFrame(step);
   }
@@ -979,7 +979,7 @@ footer{padding:40px 0 48px;color:var(--muted);font-size:13px;display:flex;flex-w
     var heroEls = document.querySelectorAll('.hero .pill, .hero h1, .hero .lede, .hero .cta, .hero .byline, .idcard, .stats .stat');
     heroEls.forEach(function(el, i){ el.classList.add('reveal'); el.style.setProperty('--d', (i * 90) + 'ms'); cleanup(el); });
     var ready = function(){ root.classList.remove('no-tr'); requestAnimationFrame(function(){ heroEls.forEach(show); }); };
-    setTimeout(function(){ document.querySelectorAll('.stats .stat b').forEach(countUp); }, 450);
+    setTimeout(function(){ document.querySelectorAll('.stats .stat b').forEach(countUp); }, 700);
 
     // section reveals: headings sweep in from the left, cards rise
     var sel = 'section .eyebrow, section h2, section .intro, section .card, section .morelink, .contact';
@@ -1000,7 +1000,7 @@ footer{padding:40px 0 48px;color:var(--muted);font-size:13px;display:flex;flex-w
     // projects: covers settle in, numbers count up
     var projs = Array.prototype.slice.call(document.querySelectorAll('#projects .proj'));
     projs.forEach(function(p){ p.classList.add('prep'); });
-    var observeProjs = function(){ once(projs, function(p){ setTimeout(function(){ p.classList.add('drawn'); p.querySelectorAll('.kpi b').forEach(countUp); }, 200); }); };
+    var observeProjs = function(){ once(projs, function(p){ var d = parseInt(p.style.getPropertyValue('--d')) || 0; setTimeout(function(){ p.classList.add('drawn'); }, 200); setTimeout(function(){ p.querySelectorAll('.kpi b').forEach(countUp); }, d + 450); }); };
     void root.offsetHeight;  // commit the hidden states
     requestAnimationFrame(function(){ requestAnimationFrame(function(){ ready(); observeAll(); observeRoles(); observeProjs(); }); });
 
