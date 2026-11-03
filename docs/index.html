@@ -113,9 +113,8 @@ nav ul a:hover{color:var(--text)}
 /* profile card */
 .idcard{position:relative;background:linear-gradient(180deg,rgba(28,28,32,.92),rgba(22,22,26,.92));border:1px solid var(--line);border-radius:22px;padding:26px;box-shadow:0 30px 80px -30px rgba(0,0,0,.8)}
 .idcard::before{content:"";position:absolute;inset:-1px;border-radius:23px;padding:1px;background:linear-gradient(140deg,rgba(245,165,36,.55),transparent 40%,transparent 60%,rgba(61,190,139,.45));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
-.id-top{display:flex;gap:18px;align-items:center;margin-bottom:22px}
-.avatar{width:104px;height:104px;border-radius:26px;padding:2px;background:linear-gradient(140deg,#F5A524,#E8590C 50%,#3DBE8B);box-shadow:0 10px 30px -10px rgba(240,138,36,.6);flex:none}
-.avatar img{display:block;width:100%;height:100%;object-fit:cover;border-radius:24px;background:#2A2A2F}
+.id-top{display:flex;gap:16px;align-items:center;margin-bottom:22px}
+.avatar{width:64px;height:64px;border-radius:18px;background:var(--grad);display:grid;place-items:center;font-weight:800;font-size:24px;color:#1A0E04;flex:none}
 .id-top b{display:block;font-size:18px}
 .id-top span{font-size:14px;color:var(--muted)}
 .id-rows{display:grid;gap:0}
@@ -381,7 +380,7 @@ footer{padding:40px 0 48px;color:var(--muted);font-size:13px;display:flex;flex-w
 .chip{transition:border-color .2s,color .2s,transform .2s}
 .chip:hover{border-color:rgba(240,138,36,.5);color:var(--text);transform:translateY(-1px)}
 .idcard{transition:transform .25s ease-out,box-shadow .35s;transform-style:preserve-3d;will-change:transform}
-.idcard:hover .avatar{transform:rotate(-3deg) scale(1.05)}
+.idcard:hover .avatar{transform:rotate(-6deg) scale(1.06)}
 .edu.prep .ring circle+circle{stroke-dashoffset:var(--len);transition:stroke-dashoffset 1.6s cubic-bezier(.3,.7,.2,1) .2s}
 .edu.prep.drawn .ring circle+circle{stroke-dashoffset:0}
 @media (prefers-reduced-motion:reduce){.card,.stat,.skill,.cert,.vol,.rec,.post,.edu,.tproj,.idcard{transition:none}
@@ -428,7 +427,7 @@ footer{padding:40px 0 48px;color:var(--muted);font-size:13px;display:flex;flex-w
 
       <aside class="idcard" aria-label="At a glance">
         <div class="id-top">
-          <div class="avatar"><img src="assets/img/ajay.jpg" alt="Ajay Patil" width="480" height="480"></div>
+          <div class="avatar" aria-hidden="true">AP</div>
           <div><b>Ajay Patil</b><span>The University of Texas at Dallas</span></div>
         </div>
         <div class="id-rows">
